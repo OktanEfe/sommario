@@ -4,13 +4,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ChevronLeft, Coffee, Milk, AlertCircle, Zap, Star } from 'lucide-react';
 
-export default async function ProductDetailPage({ 
-  params 
-}: { 
-  params: Promise<{ slug: string }> 
-}) {
-  const { slug } = await params;
+// 1️⃣ Hangi slug'ların statik oluşturulacağını bildiriyoruz
+export async function generateStaticParams() {
+  return products.map(p => ({ slug: p.slug }));
+}
 
+export default function ProductDetailPage({ params }: { params: { slug: string } }) {
+  const { slug } = params; // artık Promise değil
   const product = products.find(p => p.slug === slug);
 
   if (!product) return notFound();
