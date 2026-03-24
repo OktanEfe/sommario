@@ -3,12 +3,13 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { ChevronLeft, Calendar, Info } from 'lucide-react';
 
-export default async function CampaignDetailPage({ 
-  params 
-}: { 
-  params: Promise<{ slug: string }> 
-}) {
-  const { slug } = await params;
+// 1️⃣ Hangi slug'ların statik oluşturulacağını bildiriyoruz
+export async function generateStaticParams() {
+  return campaigns.map(c => ({ slug: c.slug }));
+}
+
+export default function CampaignDetailPage({ params }: { params: { slug: string } }) {
+  const { slug } = params; // artık Promise değil
   const campaign = campaigns.find(c => c.slug === slug);
   if (!campaign) return notFound();
 
@@ -82,7 +83,6 @@ export default async function CampaignDetailPage({
                </ul>
             </div>
 
-            
           </div>
         </div>
       </div>
