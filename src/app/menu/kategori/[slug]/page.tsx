@@ -3,15 +3,14 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { ChevronLeft } from 'lucide-react';
 
-export default async function CategoryPage({ 
-  params 
-}: { 
-  params: Promise<{ slug: string }> 
-}) {
-  const { slug } = await params;
+// 1️⃣ Hangi slug'ların statik oluşturulacağını bildiriyoruz
+export async function generateStaticParams() {
+  return categories.map(c => ({ slug: c.slug }));
+}
 
+export default function CategoryPage({ params }: { params: { slug: string } }) {
+  const { slug } = params; // artık Promise değil
   const category = categories.find(c => c.slug === slug);
-  
   const categoryProducts = products.filter(p => p.category === slug);
 
   if (!category) return notFound();
