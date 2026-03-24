@@ -3,8 +3,12 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { ChevronLeft } from 'lucide-react';
 
-export default async function BlogDetailPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+export async function generateStaticParams() {
+  return blogPosts.map(post => ({ slug: post.slug }));
+}
+
+export default function BlogDetailPage({ params }: { params: { slug: string } }) {
+  const { slug } = params; 
   const post = blogPosts.find(p => p.slug === slug);
 
   if (!post) return notFound();
