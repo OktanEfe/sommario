@@ -20,11 +20,11 @@ const FranchiseForm = () => {
             <textarea placeholder="Yatırım bütçeniz ve eklemek istedikleriniz..." rows={4} className="w-full p-4 bg-[#FAF9F6] rounded-xl text-sm outline-none border border-transparent focus:border-[#004A30]/20 transition-all resize-none"></textarea>
           </div>
 
-          <div className="md:col-span-2 pt-4">
-            <button className="w-full py-5 bg-[#004A30] text-white text-[10px] uppercase tracking-[0.3em] rounded-xl hover:opacity-90 transition-all shadow-lg shadow-[#004A30]/10">
-              Başvuruyu Gönder
-            </button>
-          </div>
+          <div className="md:col-span-2 pt-4 flex justify-center">
+  <button className="cursor-pointer w-full sm:w-auto px-12 py-5 bg-[#004A30] text-white text-[11px] font-medium uppercase tracking-[0.3em] rounded-full transition-all duration-500 shadow-lg shadow-[#004A30]/10 hover:bg-white hover:text-[#004A30] hover:shadow-xl hover:shadow-[#004A30]/15 border border-[#004A30] active:scale-[0.98]">
+    Başvuruyu Gönder
+  </button>
+</div>
         </form>
       </div>
     </section>

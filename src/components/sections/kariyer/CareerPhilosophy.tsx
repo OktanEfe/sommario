@@ -12,22 +12,22 @@ const CareerPhilosophy = () => {
             </h2>
             <div className="space-y-8">
                <div className="space-y-2">
-                 <h4 className="font-medium text-[#004A30]">Kapsayıcı Kültür</h4>
-                 <p className="text-sm text-black/50 font-light leading-relaxed">Farklılıkların zenginlik olduğuna inanıyor, her partnerimizin kendisi olabildiği bir ortam yaratıyoruz.</p>
+                 <h4 className="text-2xl text-[#004A30]">Kapsayıcı Kültür</h4>
+                 <p className="text-lg text-black/50 font-light leading-relaxed">Farklılıkların zenginlik olduğuna inanıyor, her partnerimizin kendisi olabildiği bir ortam yaratıyoruz.</p>
                </div>
                <div className="space-y-2">
-                 <h4 className="font-medium text-[#004A30]">Sürekli Gelişim</h4>
-                 <p className="text-sm text-black/50 font-light leading-relaxed">Sadece kahveyi değil, birbirimizi de geliştiriyoruz. Mentorluk programlarımızla kariyer basamaklarını güvenle çık.</p>
+                 <h4 className="text-2xl text-[#004A30]">Sürekli Gelişim</h4>
+                 <p className="text-lg text-black/50 font-light leading-relaxed">Sadece kahveyi değil, birbirimizi de geliştiriyoruz. Mentorluk programlarımızla kariyer basamaklarını güvenle çık.</p>
                </div>
             </div>
           </div>
           <div className="w-full md:w-1/2 grid grid-cols-2 gap-4">
              <div className="aspect-square bg-white rounded-3xl p-8 flex flex-col justify-end shadow-sm">
-                <span className="text-3xl font-light text-[#004A30] mb-2">%90</span>
+                <span className="text-3xl font-light text-[#004A30] mb-2">%70</span>
                 <p className="text-[10px] uppercase tracking-widest text-black/40">İç Terfi Oranı</p>
              </div>
              <div className="aspect-square bg-[#004A30] rounded-3xl p-8 flex flex-col justify-end text-white">
-                <span className="text-3xl font-light mb-2">500+</span>
+                <span className="text-3xl font-light mb-2">100+</span>
                 <p className="text-[10px] uppercase tracking-widest opacity-60">Aktif Partner</p>
              </div>
              <div className="col-span-2 aspect-[2/1] bg-white rounded-3xl p-8 border border-black/[0.03] flex items-center justify-center italic text-black/20 uppercase tracking-[0.3em]">

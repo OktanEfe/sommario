@@ -46,7 +46,7 @@ const RecruitmentProcess = () => {
                   <h4 className="text-xl font-medium text-[#1A1A1A] tracking-tight transition-colors duration-500 group-hover:text-[#004A30]">
                     {step.title}
                   </h4>
-                  <p className="text-sm text-black/40 font-light leading-relaxed max-w-[240px]">
+                  <p className="text-m text-black/40 font-light leading-relaxed max-w-[240px]">
                     {step.desc}
                   </p>
                 </div>

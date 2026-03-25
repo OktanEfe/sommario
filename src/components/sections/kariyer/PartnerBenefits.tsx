@@ -27,7 +27,7 @@ const PartnerBenefits = () => {
                 {b.icon}
               </div>
               <h4 className="text-lg font-medium mb-3 text-[#231F20]">{b.t}</h4>
-              <p className="text-[13px] text-black/50 leading-relaxed font-light">{b.d}</p>
+              <p className="text-[15px] text-black/50 leading-relaxed font-light">{b.d}</p>
             </div>
           ))}
         </div>

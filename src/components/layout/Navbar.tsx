@@ -113,17 +113,17 @@ const Navbar = () => {
       >
         <div className="px-8 pb-8 pt-3 flex flex-col gap-1 border-t border-black/[0.04] bg-white">
 
-          {/* Sommario accordion - mobilde tümü buton, link yok */}
+          {/* Sommario accordion */}
           <div>
             <button
               onClick={() => setIsMobileSommarioOpen(!isMobileSommarioOpen)}
-              className="w-full flex items-center justify-between py-3.5 text-[12px] font-medium text-[#231F20]/80 uppercase tracking-[0.15em]"
+              className="w-full flex items-center justify-between py-3.5 text-[13px] font-medium text-[#231F20] uppercase tracking-[0.15em]"
             >
               <span>Sommario</span>
               <ChevronDown 
-                size={12} 
+                size={14} 
                 strokeWidth={1.5}
-                className="transition-transform duration-500 ease-in-out"
+                className="transition-transform duration-500 ease-in-out text-[#231F20]"
                 style={{ transform: isMobileSommarioOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}
               />
             </button>
@@ -138,17 +138,17 @@ const Navbar = () => {
               }}
               className="overflow-hidden"
             >
-              <div className="pl-4 pb-3 flex flex-col gap-1">
-                <Link onClick={closeMenu} href="/sommario" className="py-2 text-[12px] font-medium text-[#231F20]/60 hover:text-[#004A30] transition-colors duration-300">
+              <div className="pl-4 pb-3 flex flex-col gap-0.5">
+                <Link onClick={closeMenu} href="/sommario" className="py-2.5 text-[13px] font-medium text-[#231F20]/70 hover:text-[#004A30] transition-colors duration-300">
                   Sommario Hakkında
                 </Link>
-                <Link onClick={closeMenu} href="/kahve" className="py-2 text-[12px] font-medium text-[#231F20]/60 hover:text-[#004A30] transition-colors duration-300">
+                <Link onClick={closeMenu} href="/kahve" className="py-2.5 text-[13px] font-medium text-[#231F20]/70 hover:text-[#004A30] transition-colors duration-300">
                   Kahve
                 </Link>
-                <Link onClick={closeMenu} href="/kampanyalar" className="py-2 text-[12px] font-medium text-[#231F20]/60 hover:text-[#004A30] transition-colors duration-300">
+                <Link onClick={closeMenu} href="/kampanyalar" className="py-2.5 text-[13px] font-medium text-[#231F20]/70 hover:text-[#004A30] transition-colors duration-300">
                   Kampanyalar
                 </Link>
-                <Link onClick={closeMenu} href="/blog" className="py-2 text-[12px] font-medium text-[#231F20]/60 hover:text-[#004A30] transition-colors duration-300">
+                <Link onClick={closeMenu} href="/blog" className="py-2.5 text-[13px] font-medium text-[#231F20]/70 hover:text-[#004A30] transition-colors duration-300">
                   Blog
                 </Link>
               </div>
@@ -170,7 +170,7 @@ const Navbar = () => {
               }}
               className="border-t border-black/[0.03]"
             >
-              <Link onClick={closeMenu} href={item.href} className="block py-3.5 text-[12px] font-medium text-[#231F20]/80 hover:text-[#004A30] uppercase tracking-[0.15em] transition-colors duration-300">
+              <Link onClick={closeMenu} href={item.href} className="block py-3.5 text-[13px] font-medium text-[#231F20] hover:text-[#004A30] uppercase tracking-[0.15em] transition-colors duration-300">
                 {item.label}
               </Link>
             </div>
@@ -185,7 +185,7 @@ const Navbar = () => {
             }}
             className="border-t border-black/[0.03]"
           >
-            <Link onClick={closeMenu} href="/magazalarimiz" className="py-3.5 flex items-center gap-1.5 text-[12px] font-medium text-[#231F20]/80 hover:text-[#004A30] uppercase tracking-[0.15em] transition-colors duration-300">
+            <Link onClick={closeMenu} href="/magazalarimiz" className="py-3.5 flex items-center gap-1.5 text-[13px] font-medium text-[#231F20] hover:text-[#004A30] uppercase tracking-[0.15em] transition-colors duration-300">
               <MapPin size={14} strokeWidth={1.5} style={{ color: '#004A30' }} />
               Mağazalarımız
             </Link>
@@ -203,7 +203,7 @@ const Navbar = () => {
             <Link 
               onClick={closeMenu}
               href="/iletisim" 
-              className="block text-center px-8 py-3.5 rounded-full text-[10px] font-medium uppercase tracking-[0.2em] transition-all duration-300 hover:opacity-90 text-white shadow-lg shadow-[#004A30]/10"
+              className="block text-center px-8 py-3.5 rounded-full text-[11px] font-semibold uppercase tracking-[0.2em] transition-all duration-300 hover:opacity-90 text-white"
               style={{ backgroundColor: '#004A30' }}
             >
               Bize Ulaşın

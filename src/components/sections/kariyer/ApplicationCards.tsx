@@ -67,7 +67,7 @@ const ApplicationCards = () => {
                 </div>
               </div>
               
-              <p className={`text-sm font-light leading-relaxed max-w-[260px] ${
+              <p className={`text-m font-light leading-relaxed max-w-[260px] ${
                 c.theme === "white" ? "text-black/50" : "text-white/80"
               }`}>
                 {c.desc}

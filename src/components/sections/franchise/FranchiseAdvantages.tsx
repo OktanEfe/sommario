@@ -78,7 +78,7 @@ const FranchiseAdvantages = () => {
                   {adv.title}
                 </h4>
 
-                <p className="text-[13px] text-white/70 leading-relaxed font-light">
+                <p className="text-[14px] text-white/70 leading-relaxed font-light">
                   {adv.desc}
                 </p>
               </div>

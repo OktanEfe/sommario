@@ -1,6 +1,6 @@
 "use client";
 import Link from 'next/link';
-import { Instagram, Facebook, Twitter, ArrowUpRight } from 'lucide-react';
+import { Instagram, Facebook, Twitter, ArrowUpRight, Mail } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,13 +9,14 @@ const Footer = () => {
     <footer className="bg-[#FAF9F6] pt-24 pb-12 border-t border-black/[0.03]">
       <div className="max-w-[1280px] mx-auto px-8">
         
+        {/* Üst Kısım: Marka ve Hızlı Link Kartları */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 mb-24">
           <div className="space-y-8">
             <h2 className="text-7xl md:text-8xl font-light tracking-tighter text-[#004A30] opacity-90">
               Sommario
             </h2>
             <p className="text-xl text-black/40 font-light max-w-sm leading-relaxed">
-              Her fincanda bir hikaye, her köşede bir huzur. Nitelikli kahvenin en saf hali.
+              Her fincanda bir hikaye, her köşede bir huzur. Nitelikli kahvenin en sar hali.
             </p>
           </div>
 
@@ -38,9 +39,10 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Link Grupları ve İletişim Alanı */}
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-24 border-t border-black/[0.05] pt-24">
           <div className="space-y-6">
-            <h4 className="text-[10px] uppercase tracking-[0.3em] font-bold text-black/30">Kurumsal</h4>
+            <h4 className="text-[10px] uppercase tracking-[0.3em] font-bold text-[#004A30]">Kurumsal</h4>
             <ul className="space-y-4">
               <li><Link href="/hakkimizda" className="text-sm text-black/60 hover:text-[#004A30] transition-colors font-light">Hikayemiz</Link></li>
               <li><Link href="/blog" className="text-sm text-black/60 hover:text-[#004A30] transition-colors font-light">Blog & Haberler</Link></li>
@@ -49,7 +51,7 @@ const Footer = () => {
           </div>
 
           <div className="space-y-6">
-            <h4 className="text-[10px] uppercase tracking-[0.3em] font-bold text-black/30">Deneyim</h4>
+            <h4 className="text-[10px] uppercase tracking-[0.3em] font-bold text-[#004A30]">Deneyim</h4>
             <ul className="space-y-4">
               <li><Link href="/menu" className="text-sm text-black/60 hover:text-[#004A30] transition-colors font-light">Menü</Link></li>
               <li><Link href="/kampanyalar" className="text-sm text-black/60 hover:text-[#004A30] transition-colors font-light">Kampanyalar</Link></li>
@@ -58,7 +60,7 @@ const Footer = () => {
           </div>
 
           <div className="space-y-6">
-            <h4 className="text-[10px] uppercase tracking-[0.3em] font-bold text-black/30">Destek</h4>
+            <h4 className="text-[10px] uppercase tracking-[0.3em] font-bold text-[#004A30]">Destek</h4>
             <ul className="space-y-4">
               <li><Link href="/iletisim" className="text-sm text-black/60 hover:text-[#004A30] transition-colors font-light">Bize Ulaşın</Link></li>
               <li><Link href="/sss" className="text-sm text-black/60 hover:text-[#004A30] transition-colors font-light">Sıkça Sorulanlar</Link></li>
@@ -66,19 +68,29 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* E-posta Yönlendirme Alanı */}
           <div className="lg:col-span-2 space-y-8">
-            <h4 className="text-[10px] uppercase tracking-[0.3em] font-bold text-black/30">Bültene Katılın</h4>
-            <div className="relative">
-              <input 
-                type="email" 
-                placeholder="E-posta adresiniz" 
-                className="w-full bg-transparent border-b border-black/10 py-4 outline-none focus:border-[#004A30] transition-all text-sm font-light"
-              />
-              <button className="absolute right-0 bottom-4 text-[10px] uppercase tracking-widest font-bold text-[#004A30]">Kaydol</button>
+            <h4 className="text-[10px] uppercase tracking-[0.3em] font-bold text-[#004A30]">İletişim</h4>
+            <div className="space-y-4">
+              <p className="text-xs uppercase tracking-widest text-black/30 font-bold">Sorularınız için</p>
+              <a 
+                href="mailto:info@sommario.com.tr" 
+                className="group flex items-center gap-4 text-2xl md:text-3xl font-serif italic text-black/70 hover:text-[#004A30] transition-all duration-500"
+              >
+                info@sommario.com.tr
+                <div className="w-10 h-10 rounded-full border border-black/5 flex items-center justify-center group-hover:bg-[#004A30] group-hover:text-white transition-all">
+                  <ArrowUpRight size={18} />
+                </div>
+              </a>
+              <div className="flex items-center gap-4 pt-4">
+                <div className="h-[1px] w-8 bg-[#004A30]/20"></div>
+                <p className="text-[10px] uppercase tracking-[0.4em] text-black/30 font-bold">Sommario Atölye</p>
+              </div>
             </div>
           </div>
         </div>
 
+        {/* Alt Kısım */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-black/[0.05] gap-8">
           <p className="text-[10px] uppercase tracking-widest text-black/30 font-medium">
             © {currentYear} Sommario Coffee Roastery. Tüm hakları saklıdır.
