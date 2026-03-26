@@ -32,15 +32,20 @@ const NavigationCards = () => {
         return "bg-[#004A30] text-white border-transparent shadow-2xl shadow-[#004A30]/20";
       case "red":
         return "bg-[#E02826] text-white border-transparent shadow-2xl shadow-[#E02826]/20";
-      default: // white
+      default: 
         return "bg-white text-[#1A1A1A] border-black/[0.05] shadow-sm hover:shadow-xl hover:shadow-black/5";
     }
   };
 
   const getButtonClasses = (theme: string) => {
-    return theme === "white" 
-      ? "bg-[#004A30] text-white hover:bg-black" 
-      : "bg-white text-black hover:bg-[#FAF9F6]";
+    switch (theme) {
+      case "green":
+        return "bg-white text-[#004A30] hover:bg-[#003824] hover:text-white border border-white/20";
+      case "red":
+        return "bg-white text-[#004A30] hover:bg-[#E02826] hover:text-white border border-white/20";
+      default:
+        return "bg-[#004A30] text-white hover:bg-white hover:text-[#004A30] border border-[#004A30]";
+    }
   };
 
   return (
@@ -55,7 +60,6 @@ const NavigationCards = () => {
             viewport={{ once: true }}
             className={`group relative p-12 rounded-[3.5rem] flex flex-col justify-between h-[500px] transition-all duration-700 border ${getThemeClasses(c.theme)}`}
           >
-            {/* Üst Kısım: Başlık ve İkon */}
             <div className="space-y-8 relative z-10">
               <div className="flex justify-between items-start">
                 <h3 className="text-4xl font-light tracking-tighter leading-[1.1] max-w-[220px]">
@@ -75,7 +79,6 @@ const NavigationCards = () => {
               </p>
             </div>
 
-            {/* Alt Kısım: Buton ve Noktalar */}
             <div className="space-y-6 relative z-10">
               <Link 
                 href={c.link} 
@@ -91,7 +94,6 @@ const NavigationCards = () => {
               </div>
             </div>
 
-            {/* Arka Plan Numarası (Devasa rakam efekti) */}
             <div className={`absolute -bottom-4 -right-4 text-[160px] font-bold leading-none select-none pointer-events-none opacity-[0.04] transition-all duration-1000 group-hover:scale-110 group-hover:-rotate-6 ${
               c.theme === "white" ? "text-black" : "text-white"
             }`}>

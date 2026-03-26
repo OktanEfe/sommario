@@ -47,14 +47,12 @@ const StoryHero = () => {
           </motion.div>
         </div>
 
-        {/* SAĞ: VISUAL CRAFT (Görsel Alanı) */}
         <motion.div 
           initial={{ opacity: 0, scale: 1.1 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
           className="relative h-[600px] md:h-[750px] w-full"
         >
-          {/* Görsel Çerçevesi */}
           <div className="absolute inset-0 rounded-[3rem] overflow-hidden shadow-2xl shadow-black/5 border border-black/[0.03]">
             <img 
               src="/path-to-your-uploaded-image.jpg" 
@@ -63,17 +61,7 @@ const StoryHero = () => {
             />
           </div>
 
-          {/* Floating Detail (Küçük bir yüzen kart) */}
-          <motion.div 
-            animate={{ y: [0, -20, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -bottom-10 -left-10 bg-white p-8 rounded-3xl shadow-xl border border-black/[0.02] hidden md:block"
-          >
-            <p className="text-[10px] font-bold uppercase tracking-widest text-[#004A30] mb-2">Motto</p>
-            <p className="text-sm font-serif italic text-black/60 max-w-[150px]">
-              &quot;Çekirdeğe saygı, emeğe saygı, insana saygı.&quot;
-            </p>
-          </motion.div>
+          
         </motion.div>
 
       </div>

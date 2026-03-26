@@ -44,17 +44,14 @@ const ContactCTA = () => {
           </h2>
 
           <div className="flex flex-col items-center gap-8">
-            <Link 
-              href="/iletisim"
-              className="group relative flex items-center gap-4 px-12 py-5 bg-[#004A30] rounded-full transition-all duration-500 hover:shadow-[0_15px_30px_rgba(0,74,48,0.25)] active:scale-95"
-            >
-              <span className="text-white text-[11px] font-bold uppercase tracking-[0.3em]">
-                Bize Ulaşın
-              </span>
-              <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                <ArrowUpRight size={16} className="text-white" />
-              </div>
-            </Link>
+          <Link 
+  href="/iletisim"
+  className="group relative flex items-center gap-4 px-12 py-5 bg-[#004A30] rounded-full transition-all duration-500 hover:bg-white hover:shadow-[0_15px_30px_rgba(0,74,48,0.25)] active:scale-95"
+>
+  <span className="text-white text-[11px] font-bold uppercase tracking-[0.3em] transition-colors duration-500 group-hover:text-[#004A30]">
+    Bize Ulaşın
+  </span>
+</Link>
 
             <div className="flex items-center gap-3">
               <div className="w-2 h-[1px] bg-[#E02826]" />
