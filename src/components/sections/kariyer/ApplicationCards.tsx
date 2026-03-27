@@ -6,41 +6,46 @@ import { ArrowRight } from 'lucide-react';
 
 const cards = [
   {
-    title: "Mağaza Partneri Ol",
-    desc: "Barista veya Mağaza Yöneticisi olarak ekibimize katıl, kahve tutkunu misafirlerimizle paylaş.",
-    link: "/kariyer/magaza-basvuru",
+    title: "Menümüzü Keşfedin",
+    desc: "Özenle seçilmiş çekirdeklerden hazırlanan eşsiz lezzetler ve özel reçeteler.",
+    link: "/menu",
     theme: "green"
   },
   {
-    title: "Merkez Ofis Rolleri",
-    desc: "Pazarlama, operasyon veya tedarik zinciri gibi alanlarda kariyerini bir adım ileriye taşı.",
-    link: "/kariyer/ofis-basvuru",
+    title: "Franchise Fırsatları",
+    desc: "Sommario ailesine katılarak kendi başarı hikayenizi bizimle yazın.",
+    link: "/franchise",
     theme: "white"
   },
   {
-    title: "Geleceğin Yıldızları",
-    desc: "Öğrencilik döneminde Sommario kültürünü yakından tanı ve profesyonel dünyaya ilk adımını at.",
-    link: "/kariyer/staj-basvuru",
+    title: "Kariyer & Gelişim",
+    desc: "Kahve tutkusunu profesyonelliğe dönüştürmek isteyenler için yeni kapılar.",
+    link: "/kariyer",
     theme: "red"
   }
 ];
 
-const ApplicationCards = () => {
+const NavigationCards = () => {
   const getThemeClasses = (theme: string) => {
     switch (theme) {
       case "green":
         return "bg-[#004A30] text-white border-transparent shadow-2xl shadow-[#004A30]/20";
       case "red":
         return "bg-[#E02826] text-white border-transparent shadow-2xl shadow-[#E02826]/20";
-      default:
+      default: 
         return "bg-white text-[#1A1A1A] border-black/[0.05] shadow-sm hover:shadow-xl hover:shadow-black/5";
     }
   };
 
   const getButtonClasses = (theme: string) => {
-    return theme === "white" 
-      ? "bg-[#004A30] text-white hover:bg-black" 
-      : "bg-white text-black hover:bg-[#FAF9F6]";
+    switch (theme) {
+      case "green":
+        return "bg-white text-[#004A30] hover:bg-[#003824] hover:text-white border border-white/20";
+      case "red":
+        return "bg-white text-[#004A30] hover:bg-[#E02826] hover:text-white border border-white/20";
+      default:
+        return "bg-[#004A30] text-white hover:bg-white hover:text-[#004A30] border border-[#004A30]";
+    }
   };
 
   return (
@@ -55,9 +60,9 @@ const ApplicationCards = () => {
             viewport={{ once: true }}
             className={`group relative p-12 rounded-[3.5rem] flex flex-col justify-between h-[500px] transition-all duration-700 border ${getThemeClasses(c.theme)}`}
           >
-            <div className="space-y-8">
+            <div className="space-y-8 relative z-10">
               <div className="flex justify-between items-start">
-                <h3 className="text-4xl font-light tracking-tighter leading-[1.1] max-w-[200px]">
+                <h3 className="text-4xl font-light tracking-tighter leading-[1.1] max-w-[220px]">
                   {c.title}
                 </h3>
                 <div className={`p-3 rounded-full border transition-all duration-500 ${
@@ -67,19 +72,19 @@ const ApplicationCards = () => {
                 </div>
               </div>
               
-              <p className={`text-m font-light leading-relaxed max-w-[260px] ${
+              <p className={`text-sm font-light leading-relaxed max-w-[260px] ${
                 c.theme === "white" ? "text-black/50" : "text-white/80"
               }`}>
                 {c.desc}
               </p>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-6 relative z-10">
               <Link 
                 href={c.link} 
-                className={`inline-flex items-center justify-center w-full py-5 rounded-full text-[11px] uppercase tracking-[0.2em] font-bold transition-all duration-500 transform active:scale-95 ${getButtonClasses(c.theme)}`}
+                className={`inline-flex items-center justify-center w-full py-5 rounded-full text-[11px] uppercase tracking-[0.2em] font-bold transition-all duration-500 transform active:scale-95 shadow-lg ${getButtonClasses(c.theme)}`}
               >
-                Hemen Başvur
+                İncele
               </Link>
               
               <div className="flex items-center justify-center gap-1.5 opacity-30 group-hover:opacity-100 transition-opacity duration-700">
@@ -101,4 +106,4 @@ const ApplicationCards = () => {
   );
 };
 
-export default ApplicationCards;
+export default NavigationCards;
