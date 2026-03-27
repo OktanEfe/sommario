@@ -54,7 +54,7 @@ const Navbar = () => {
               href="/sommario"
               className="text-[13px] font-semibold tracking-[0.14em] text-[#231F20]/80 hover:text-[#004A30] transition-colors uppercase"
             >
-              Sommario
+              Sommarıo
             </Link>
 
             <button className="ml-1 focus:outline-none" aria-label="Sommario Menüsü">
@@ -115,7 +115,7 @@ const Navbar = () => {
             href="/franchise"
             className="text-[13px] font-semibold tracking-[0.14em] text-[#231F20]/80 hover:text-[#004A30] uppercase transition-colors"
           >
-            Franchise
+            Franchıse
           </Link>
 
           <Link
@@ -138,13 +138,13 @@ const Navbar = () => {
             Bize Ulaşın
           </Link>
         </div>
-
         <div className="lg:hidden ml-auto">
   <button
     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-    className="p-2 rounded-lg hover:bg-black/[0.03] transition-colors duration-300"
+    className="p-2.5 rounded-xl bg-[#FAF9F6] text-[#231F20] border border-black/[0.08] shadow-sm hover:bg-[#F2F2F7] transition-all duration-300"
     aria-label="Menüyü Aç"
   >
+  
             <div className="relative w-6 h-6 flex items-center justify-center">
               <span
                 className={`absolute transition-all duration-300 ${
@@ -179,7 +179,7 @@ const Navbar = () => {
               onClick={() => setIsMobileSommarioOpen(!isMobileSommarioOpen)}
               className="w-full flex items-center justify-between py-3.5 text-[14px] font-semibold tracking-[0.12em] text-[#231F20] uppercase"
             >
-              <span>Sommario</span>
+              <span>Sommarıo</span>
               <ChevronDown
                 size={14}
                 strokeWidth={1.6}
@@ -204,7 +204,7 @@ const Navbar = () => {
                   href="/sommario"
                   className="py-2.5 text-[14px] font-medium text-[#231F20]/70 hover:text-[#004A30] transition-colors"
                 >
-                  Sommario Hakkında
+                  Sommarıo Hakkında
                 </Link>
                 <Link
                   onClick={closeMenu}
@@ -234,7 +234,7 @@ const Navbar = () => {
           {[
             { href: "/menu", label: "Menü" },
             { href: "/kariyer", label: "Kariyer" },
-            { href: "/franchise", label: "Franchise" },
+            { href: "/franchise", label: "Franchıse" },
           ].map((item, i) => (
             <div
               key={item.href}

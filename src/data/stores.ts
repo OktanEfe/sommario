@@ -1,44 +1,93 @@
 export interface Store {
-    id: number;
-    slug: string;
-    name: string;
-    status: 'active' | 'soon';
-    address?: string;
-    phone?: string;
-    hours?: {
-      weekdays: string;
-      weekend: string;
-    };
-    mainImage: string;
-    gallery: string[];
-  }
-  
-  export const stores: Store[] = [
-    {
-      id: 1,
-      slug: "arastapark",
-      name: "Arasta Şubesi",
-      status: "active",
-      address: "Yahyakaptan, Arastapark AVM No:1, İzmit/Kocaeli",
-      phone: "0262 311 11 11",
-      hours: { weekdays: "08:00 - 22:00", weekend: "09:00 - 23:00" },
-      mainImage: "/stores/arasta-main.jpg", 
-      gallery: ["/stores/arasta-1.jpg", "/stores/arasta-2.jpg"]
+  id: number;
+  slug: string;
+  name: string;
+  status: "active" | "soon";
+  address?: string;
+  phone?: string;
+  openingHours: {
+    open: string;
+    close: string;
+  };
+  hours?: {
+    weekdays: string;
+    weekend: string;
+  };
+  mainImage: string;
+  gallery: string[];
+}
+
+export const stores: Store[] = [
+  {
+    id: 1,
+    slug: "kent-meydani",
+    name: "Kent Meydanı",
+    status: "active",
+    address: "Karabaş, Rauf Orbay Sk. No: 11, 41040 İzmit/Kocaeli",
+    phone: "0533 415 2925",
+    openingHours: {
+      open: "09:00",
+      close: "00:00",
     },
-    {
-      id: 2,
-      slug: "carsi",
-      name: "İzmit Kent Meydanı Şubesi",
-      status: "active",
-      address: "Ömerağa Mah. Hürriyet Cad. İzmit/Kocaeli",
-      phone: "0262 322 22 22",
-      mainImage: "/stores/carsi-main.jpg",
-      gallery: []
+    mainImage: "/stores/kent-meydani/main.webp",
+    gallery: [],
+  },
+  {
+    id: 2,
+    slug: "kaptan-subesi",
+    name: "Kaptan Şubesi",
+    status: "active",
+    address: "Alikahya Fatih, Akarca Cd. No: 14, 41310 İzmit/Kocaeli",
+    phone: "0533 415 2925",
+    openingHours: {
+      open: "08:00",
+      close: "00:00",
     },
-    { id: 3, slug: "yahyakaptan", name: "Yahya Kaptan Şubesi", status: "active", mainImage: "/stores/yahya-main.jpg", gallery: [] },
-    { id: 4, slug: "degirmendere", name: "Değirmendere Şubesi", status: "active", mainImage: "/stores/degirmen-main.jpg", gallery: [] },
-    { id: 5, slug: "kosekoy", name: "Köseköy Şubesi", status: "active", mainImage: "/stores/kosekoy-main.jpg", gallery: [] },
-    // { id: 6, slug: "basiskele", name: "Başiskele", status: "soon", mainImage: "", gallery: [] },
-    // { id: 7, slug: "golcuk", name: "Gölcük", status: "soon", mainImage: "", gallery: [] },
-    // { id: 8, slug: "karamursel", name: "Karamürsel", status: "soon", mainImage: "", gallery: [] },
-  ];
+    mainImage: "/stores/kaptan-subesi/main.webp",
+    gallery: [],
+  },
+  {
+    id: 3,
+    slug: "arasta",
+    name: "Arasta",
+    status: "active",
+    address:
+      "Akasyalar Caddesi, Yahyakaptan, Arastapark AVM No: 24, 41100 İzmit/Kocaeli",
+    phone: "0533 415 2925",
+    openingHours: {
+      open: "09:00",
+      close: "00:30",
+    },
+    mainImage: "/stores/arasta/main.webp",
+    gallery: [],
+  },
+  {
+    id: 4,
+    slug: "degirmendere",
+    name: "Değirmendere",
+    status: "active",
+    address:
+      "Değirmendere Merkez, Prof. Muammer Aksoy Cd., 41000 Gölcük/Kocaeli",
+    phone: "0530 135 7470",
+    openingHours: {
+      open: "08:00",
+      close: "00:00",
+    },
+    mainImage: "/stores/degirmendere/main.webp",
+    gallery: [],
+  },
+  {
+    id: 5,
+    slug: "kosekoy",
+    name: "Köseköy",
+    status: "soon",
+    address: "Dumlupınar, Atlas Sk. No: 102, 41250 Kartepe/Kocaeli",
+    phone: "",
+    openingHours: {
+      open: "",
+      close: "",
+    },
+    mainImage: "/stores/kosekoy/main.webp",
+    gallery: [],
+  },
+];

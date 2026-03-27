@@ -82,7 +82,7 @@ export default function ContactPage() {
                     E-posta
                   </h4>
                   <p className="text-[18px] md:text-[24px] text-[#1A1A1A] font-light italic break-all sm:break-normal">
-                    merhaba@sommario.com.tr
+                    info@sommario.com.tr
                   </p>
                 </div>
               </div>
@@ -96,7 +96,9 @@ export default function ContactPage() {
                     Telefon
                   </h4>
                   <p className="text-[18px] md:text-[24px] text-[#1A1A1A] font-light">
-                    +90 (262) 344 00 00
+                    +90 533 415 2925
+
+
                   </p>
                 </div>
               </div>
