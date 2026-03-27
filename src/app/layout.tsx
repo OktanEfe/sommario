@@ -17,15 +17,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="tr" className={inter.className}>
+    <html lang="tr" className={`${inter.className} overflow-x-hidden`}>
       <body className="bg-white antialiased text-raisin overflow-x-hidden">
-        <SmoothScroll>
-          <Navbar />
-          <main className="pt-24">
-            <PageTransition>{children}</PageTransition>
-          </main>
-          <Footer />
-        </SmoothScroll>
+        <div className="relative w-full overflow-x-hidden">
+          <SmoothScroll>
+            <Navbar />
+            <main className="pt-24 overflow-x-hidden">
+              <PageTransition>{children}</PageTransition>
+            </main>
+            <Footer />
+          </SmoothScroll>
+        </div>
       </body>
     </html>
   );

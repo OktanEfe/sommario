@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronDown, Menu, X, MapPin } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isSommarioOpen, setIsSommarioOpen] = useState(false);
@@ -24,12 +24,12 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 z-[100] w-full bg-white transition-all duration-500 ${
+      className={`fixed inset-x-0 top-0 z-[100] max-w-full overflow-x-clip bg-white transition-all duration-500 ${
         scrolled ? "py-2 shadow-sm" : "py-4"
       }`}
     >
-      <div className="w-[96%] md:w-[94%] xl:w-[90%] 2xl:w-[85%] max-w-[1600px] mx-auto flex items-center justify-between">
-        <div className="flex-none">
+      <div className="mx-auto flex w-[96%] max-w-[1600px] items-center justify-between overflow-x-clip md:w-[94%] xl:w-[90%] 2xl:w-[85%]">
+        <div className="flex-none max-w-full overflow-hidden">
           <Link href="/" className="block transition-opacity hover:opacity-80">
             <Image
               src="/logo/logo.png"
@@ -37,8 +37,8 @@ const Navbar = () => {
               width={566}
               height={400}
               priority
-              className={`w-auto object-contain transition-all duration-500 ${
-                scrolled ? "h-14 sm:h-16" : "h-24 sm:h-28"
+              className={`max-w-full w-auto object-contain transition-all duration-500 ${
+                scrolled ? "h-14 sm:h-16" : "h-20 sm:h-24"
               }`}
             />
           </Link>
@@ -57,7 +57,10 @@ const Navbar = () => {
               Sommarıo
             </Link>
 
-            <button className="ml-1 focus:outline-none" aria-label="Sommario Menüsü">
+            <button
+              className="ml-1 focus:outline-none"
+              aria-label="Sommario Menüsü"
+            >
               <ChevronDown
                 size={13}
                 strokeWidth={1.6}
@@ -138,31 +141,32 @@ const Navbar = () => {
             Bize Ulaşın
           </Link>
         </div>
-        <div className="lg:hidden ml-auto">
-  <button
-    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-    className="p-2.5 rounded-xl bg-[#004A30] text-white border border-[#004A30] shadow-md shadow-[#004A30]/20 hover:bg-[#003824] transition-all duration-300 active:scale-95"
-    aria-label="Menüyü Aç"
-  >
-    <div className="relative w-6 h-6 flex items-center justify-center">
-      <span
-        className={`absolute transition-all duration-300 ${
-          isMobileMenuOpen ? "opacity-100 rotate-0" : "opacity-0 rotate-90"
-        }`}
-      >
-        <X size={26} strokeWidth={2.2} className="text-white" />
-      </span>
 
-      <span
-        className={`absolute transition-all duration-300 ${
-          isMobileMenuOpen ? "opacity-0 -rotate-90" : "opacity-100 rotate-0"
-        }`}
-      >
-        <Menu size={26} strokeWidth={2.2} className="text-white" />
-      </span>
-    </div>
-  </button>
-</div>
+        <div className="lg:hidden ml-auto shrink-0">
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="p-2.5 rounded-xl bg-[#004A30] text-white border border-[#004A30] shadow-md shadow-[#004A30]/20 hover:bg-[#003824] transition-all duration-300 active:scale-95"
+            aria-label="Menüyü Aç"
+          >
+            <div className="relative w-6 h-6 flex items-center justify-center overflow-hidden">
+              <span
+                className={`absolute transition-all duration-300 ${
+                  isMobileMenuOpen ? "opacity-100 rotate-0" : "opacity-0 rotate-90"
+                }`}
+              >
+                <X size={26} strokeWidth={2.2} className="text-white" />
+              </span>
+
+              <span
+                className={`absolute transition-all duration-300 ${
+                  isMobileMenuOpen ? "opacity-0 -rotate-90" : "opacity-100 rotate-0"
+                }`}
+              >
+                <Menu size={26} strokeWidth={2.2} className="text-white" />
+              </span>
+            </div>
+          </button>
+        </div>
       </div>
 
       <div
@@ -172,9 +176,9 @@ const Navbar = () => {
           transition:
             "max-height 500ms cubic-bezier(0.4, 0, 0.2, 1), opacity 300ms ease",
         }}
-        className="lg:hidden overflow-hidden"
+        className="lg:hidden w-full max-w-full overflow-hidden"
       >
-        <div className="px-6 pb-7 pt-3 flex flex-col gap-1 border-t border-black/[0.05] bg-white">
+        <div className="w-full max-w-full px-6 pb-7 pt-3 flex flex-col gap-1 border-t border-black/[0.05] bg-white overflow-x-hidden">
           <div>
             <button
               onClick={() => setIsMobileSommarioOpen(!isMobileSommarioOpen)}

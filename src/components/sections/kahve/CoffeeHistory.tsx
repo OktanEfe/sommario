@@ -5,9 +5,7 @@ import { motion } from 'framer-motion';
 const CoffeeHistory = () => {
   return (
     <section className="py-40 bg-white overflow-hidden relative">
-      <div className="absolute top-20 left-10 text-[15vw] font-bold text-black/[0.01] select-none pointer-events-none uppercase tracking-tighter leading-none">
-        Heritage
-      </div>
+
 
       <div className="max-w-[1280px] mx-auto px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
