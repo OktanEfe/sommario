@@ -141,27 +141,28 @@ const Navbar = () => {
         <div className="lg:hidden ml-auto">
   <button
     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-    className="p-2.5 rounded-xl bg-[#FAF9F6] text-[#231F20] border border-black/[0.08] shadow-sm hover:bg-[#F2F2F7] transition-all duration-300"
+    className="p-2.5 rounded-xl bg-[#004A30] text-white border border-[#004A30] shadow-md shadow-[#004A30]/20 hover:bg-[#003824] transition-all duration-300 active:scale-95"
     aria-label="Menüyü Aç"
   >
-  
-            <div className="relative w-6 h-6 flex items-center justify-center">
-              <span
-                className={`absolute transition-all duration-300 ${
-                  isMobileMenuOpen ? "opacity-100 rotate-0" : "opacity-0 rotate-90"
-                }`}
-              >
-<X size={26} strokeWidth={2} />
-</span>
-              <span
-                className={`absolute transition-all duration-300 ${
-                  isMobileMenuOpen ? "opacity-0 -rotate-90" : "opacity-100 rotate-0"
-                }`}
-              >
-<Menu size={26} strokeWidth={2} />              </span>
-            </div>
-          </button>
-        </div>
+    <div className="relative w-6 h-6 flex items-center justify-center">
+      <span
+        className={`absolute transition-all duration-300 ${
+          isMobileMenuOpen ? "opacity-100 rotate-0" : "opacity-0 rotate-90"
+        }`}
+      >
+        <X size={26} strokeWidth={2.2} className="text-white" />
+      </span>
+
+      <span
+        className={`absolute transition-all duration-300 ${
+          isMobileMenuOpen ? "opacity-0 -rotate-90" : "opacity-100 rotate-0"
+        }`}
+      >
+        <Menu size={26} strokeWidth={2.2} className="text-white" />
+      </span>
+    </div>
+  </button>
+</div>
       </div>
 
       <div
