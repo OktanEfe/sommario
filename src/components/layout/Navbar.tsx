@@ -140,26 +140,25 @@ const Navbar = () => {
         </div>
 
         <div className="lg:hidden ml-auto">
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="p-2 rounded-lg hover:bg-black/[0.03] transition-colors duration-300"
-            aria-label="Menüyü Aç"
-          >
+  <button
+    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+    className="p-2 rounded-lg hover:bg-black/[0.03] transition-colors duration-300"
+    aria-label="Menüyü Aç"
+  >
             <div className="relative w-6 h-6 flex items-center justify-center">
               <span
                 className={`absolute transition-all duration-300 ${
                   isMobileMenuOpen ? "opacity-100 rotate-0" : "opacity-0 rotate-90"
                 }`}
               >
-                <X size={24} strokeWidth={1.6} />
-              </span>
+<X size={26} strokeWidth={2} />
+</span>
               <span
                 className={`absolute transition-all duration-300 ${
                   isMobileMenuOpen ? "opacity-0 -rotate-90" : "opacity-100 rotate-0"
                 }`}
               >
-                <Menu size={24} strokeWidth={1.6} />
-              </span>
+<Menu size={26} strokeWidth={2} />              </span>
             </div>
           </button>
         </div>
@@ -271,7 +270,6 @@ const Navbar = () => {
               href="/magazalarimiz"
               className="py-3.5 flex items-center gap-1.5 text-[14px] font-semibold tracking-[0.12em] text-[#231F20] hover:text-[#004A30] uppercase transition-colors"
             >
-              <MapPin size={14} strokeWidth={1.6} className="text-[#004A30]" />
               Mağazalarımız
             </Link>
           </div>

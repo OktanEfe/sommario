@@ -27,12 +27,12 @@ const CoffeeHistory = () => {
               </div>
 
               <h2 className="text-6xl md:text-8xl font-light tracking-tighter text-[#1A1A1A] leading-[0.9]">
-                Etiyopya’nın <br />
-                <span className="italic font-serif text-[#004A30]">Yayla Güneşi.</span>
+                Kahvenin <br />
+                <span className="italic font-serif text-[#004A30]">Sessiz Mirası.</span>
               </h2>
 
-              <p className="text-xl text-black/40 font-light leading-relaxed max-w-lg">
-                MS 850 yılında Çoban Kaldi’nin keçilerinin dansıyla başlayan bu kadim serüven, yüzyıllar içinde bir içecekten çok; bir kültürün, bir sanatın ve paylaşılan her anın sessiz şahidi haline geldi.
+              <p className="text-xl text-black/40 font-light leading-relaxed max-w-xl">
+                Etiyopya’da Çoban Kaldi’nin merakıyla başlayan kahvenin yolculuğu, Yemen’in Mocha limanından İstanbul kahvehanelerine uzanarak bir içecekten çok daha fazlasına dönüştü; bugün ise üçüncü dalga kahve anlayışıyla birlikte çekirdeğin kökenine, karakterine ve işlenişine saygı duyan modern bir kültüre evrildi. Sommario, bu köklü mirası nitelikli çekirdekler ve çağdaş kavurma yaklaşımıyla bugünün fincanına taşır.
               </p>
             </motion.div>
 
@@ -42,8 +42,8 @@ const CoffeeHistory = () => {
                 <p className="text-[10px] uppercase tracking-widest text-[#004A30] font-bold">İlk Keşif</p>
               </div>
               <div className="space-y-2">
-                <p className="text-3xl font-light italic tracking-tighter text-[#1A1A1A]">1500</p>
-                <p className="text-[10px] uppercase tracking-widest text-[#004A30] font-bold">Mocha Limanı</p>
+                <p className="text-3xl font-light italic tracking-tighter text-[#1A1A1A]">1550</p>
+                <p className="text-[10px] uppercase tracking-widest text-[#004A30] font-bold">Kahvehane Kültürü</p>
               </div>
             </div>
           </div>
@@ -56,16 +56,12 @@ const CoffeeHistory = () => {
           >
             <div className="absolute inset-0 flex items-center justify-center p-16">
               <div className="w-full h-full border border-[#004A30]/5 rounded-[3rem] flex items-center justify-center relative overflow-hidden">
-                
-                
                 <div className="text-center space-y-4 group-hover:scale-110 transition-transform duration-1000">
                   <div className="text-4xl italic font-serif text-[#004A30]/20">Miras</div>
                   <div className="w-12 h-px bg-[#E02826]/20 mx-auto" />
                 </div>
               </div>
             </div>
-
-            
           </motion.div>
 
         </div>
