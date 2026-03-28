@@ -3,7 +3,36 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ChevronLeft, Calendar, Info } from 'lucide-react';
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Kampanyalar",
+  description:
+    "Sommario Roastery kampanyalarını keşfedin. Güncel fırsatlar, özel teklifler ve avantajlı seçeneklerle kahve deneyiminizi daha keyifli hale getirin.",
+  keywords: [
+    "Sommario kampanyalar",
+    "kahve kampanyası",
+    "güncel fırsatlar",
+    "özel teklif",
+    "indirimli kahve",
+    "cafe kampanya",
+  ],
+  alternates: {
+    canonical: "https://sommario.com.tr/kampanyalar",
+  },
+  openGraph: {
+    title: "Kampanyalar | Sommario Roastery",
+    description:
+      "Güncel kampanyalar, özel fırsatlar ve avantajlı tekliflerle Sommario dünyasını keşfedin.",
+    url: "https://sommario.com.tr/kampanyalar",
+    type: "website",
+  },
+  twitter: {
+    title: "Kampanyalar | Sommario Roastery",
+    description:
+      "Güncel kampanyalar, özel fırsatlar ve avantajlı tekliflerle Sommario dünyasını keşfedin.",
+  },
+};
 export async function generateStaticParams() {
   return campaigns.map(c => ({ slug: c.slug }));
 }
