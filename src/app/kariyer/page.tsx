@@ -4,6 +4,7 @@ import RecruitmentProcess from "@/components/sections/kariyer/RecruitmentProcess
 import PartnerBenefits from "@/components/sections/kariyer/PartnerBenefits";
 import ApplicationCards from "@/components/sections/kariyer/ApplicationCards"; 
 import CareerFAQ from "@/components/sections/kariyer/CareerFAQ";
+import CareerForm from "@/components/sections/kariyer/CareerForm";
 
 export default function CareerPage() {
   return (
@@ -14,6 +15,7 @@ export default function CareerPage() {
       <PartnerBenefits />
       <ApplicationCards />
       <CareerFAQ />
+      <CareerForm />
     </main>
   );
 }

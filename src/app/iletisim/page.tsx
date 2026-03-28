@@ -155,65 +155,91 @@ export default function ContactPage() {
           </div>
 
           <div className="lg:col-span-7">
-            <div className="bg-[#FAF9F6] p-6 sm:p-8 md:p-10 xl:p-12 rounded-[2.2rem] md:rounded-[3rem] border border-black/[0.02] shadow-sm">
-              <form className="space-y-7 md:space-y-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-                  <div className="space-y-3">
-                    <label className="text-[10px] uppercase tracking-[0.2em] text-black/40 font-bold ml-1">
-                      Ad Soyad
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full p-4 md:p-5 bg-white rounded-2xl outline-none focus:ring-1 focus:ring-[#004A30]/10 transition-all text-sm md:text-[15px] font-light border border-black/[0.03]"
-                      placeholder="İsminiz nedir?"
-                    />
-                  </div>
+  <div className="bg-[#FAF9F6] p-6 sm:p-8 md:p-10 xl:p-12 rounded-[2.2rem] md:rounded-[3rem] border border-black/[0.02] shadow-sm">
+    <form className="space-y-7 md:space-y-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div className="space-y-3">
+          <label className="block text-[11px] md:text-[12px] uppercase tracking-[0.18em] text-black font-bold ml-1">
+            Ad Soyad
+          </label>
+          <input
+            type="text"
+            name="name"
+            className="w-full p-4 md:p-5 bg-white rounded-2xl outline-none focus:ring-2 focus:ring-[#004A30]/15 transition-all text-sm md:text-[15px] text-black placeholder:text-black/35 font-normal border border-black/[0.05]"
+            placeholder="İsminiz nedir?"
+          />
+        </div>
 
-                  <div className="space-y-3">
-                    <label className="text-[10px] uppercase tracking-[0.2em] text-black/40 font-bold ml-1">
-                      E-posta
-                    </label>
-                    <input
-                      type="email"
-                      className="w-full p-4 md:p-5 bg-white rounded-2xl outline-none focus:ring-1 focus:ring-[#004A30]/10 transition-all text-sm md:text-[15px] font-light border border-black/[0.03]"
-                      placeholder="Adresiniz..."
-                    />
-                  </div>
-                </div>
+        <div className="space-y-3">
+          <label className="block text-[11px] md:text-[12px] uppercase tracking-[0.18em] text-black font-bold ml-1">
+            E-posta
+          </label>
+          <input
+            type="email"
+            name="email"
+            className="w-full p-4 md:p-5 bg-white rounded-2xl outline-none focus:ring-2 focus:ring-[#004A30]/15 transition-all text-sm md:text-[15px] text-black placeholder:text-black/35 font-normal border border-black/[0.05]"
+            placeholder="Adresiniz..."
+          />
+        </div>
+      </div>
 
-                <div className="space-y-3">
-                  <label className="text-[10px] uppercase tracking-[0.2em] text-black/40 font-bold ml-1">
-                    Konu Başlığı
-                  </label>
-                  <select className="w-full p-4 md:p-5 bg-white rounded-2xl outline-none focus:ring-1 focus:ring-[#004A30]/10 transition-all text-sm md:text-[15px] font-light border border-black/[0.03] appearance-none cursor-pointer">
-                    <option>Genel Sorular</option>
-                    <option>Franchise & İş Ortaklığı</option>
-                    <option>Kariyer Başvurusu</option>
-                    <option>Öneri ve Geri Bildirim</option>
-                  </select>
-                </div>
+      <div className="space-y-3">
+        <label className="block text-[11px] md:text-[12px] uppercase tracking-[0.18em] text-black font-bold ml-1">
+          Konu Başlığı
+        </label>
+        <select
+          name="subject"
+          defaultValue="Genel Sorular"
+          className="w-full p-4 md:p-5 bg-white rounded-2xl outline-none focus:ring-2 focus:ring-[#004A30]/15 transition-all text-sm md:text-[15px] text-black font-normal border border-black/[0.05] appearance-none cursor-pointer"
+        >
+          <option>Genel Sorular</option>
+          <option>Franchise & İş Ortaklığı</option>
+          <option>Kariyer Başvurusu</option>
+          <option>Öneri ve Geri Bildirim</option>
+        </select>
+      </div>
 
-                <div className="space-y-3">
-                  <label className="text-[10px] uppercase tracking-[0.2em] text-black/40 font-bold ml-1">
-                    Mesajınız
-                  </label>
-                  <textarea
-                    rows={6}
-                    className="w-full p-4 md:p-5 bg-white rounded-2xl outline-none focus:ring-1 focus:ring-[#004A30]/10 transition-all text-sm md:text-[15px] font-light border border-black/[0.03] resize-none"
-                    placeholder="Size nasıl yardımcı olabiliriz?"
-                  ></textarea>
-                </div>
+      <div className="space-y-3">
+        <label className="block text-[11px] md:text-[12px] uppercase tracking-[0.18em] text-black font-bold ml-1">
+          Mesajınız
+        </label>
+        <textarea
+          name="message"
+          rows={6}
+          className="w-full p-4 md:p-5 bg-white rounded-2xl outline-none focus:ring-2 focus:ring-[#004A30]/15 transition-all text-sm md:text-[15px] text-black placeholder:text-black/35 font-normal border border-black/[0.05] resize-none"
+          placeholder="Size nasıl yardımcı olabiliriz?"
+        />
+      </div>
 
-                <button className="w-full group px-10 md:px-12 py-4 md:py-5 bg-[#004A30] text-white rounded-2xl text-[10px] md:text-[11px] uppercase tracking-[0.32em] md:tracking-[0.4em] font-bold flex items-center justify-center gap-3 md:gap-4 hover:bg-[#003824] transition-all duration-500 shadow-xl shadow-[#004A30]/10">
-                  Mesajı Gönder
-                  <Send
-                    size={14}
-                    className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
-                  />
-                </button>
-              </form>
-            </div>
-          </div>
+      <label className="flex items-start gap-3 text-[13px] md:text-[14px] text-black/60 leading-relaxed font-light">
+        <input
+          type="checkbox"
+          name="kvkk"
+          required
+          className="mt-1 h-4 w-4 rounded border-black/20 accent-[#004A30]"
+        />
+        <span>
+          Kişisel verilerimin işlenmesine ilişkin{" "}
+          <a href="/kvkk" className="text-[#004A30] underline underline-offset-2">
+            KVKK Aydınlatma Metni
+          </a>
+          ’ni okudum ve kabul ediyorum.
+        </span>
+      </label>
+
+      <button
+        type="submit"
+        className="w-full group px-10 md:px-12 py-4 md:py-5 bg-[#004A30] text-white rounded-2xl text-[10px] md:text-[11px] uppercase tracking-[0.28em] md:tracking-[0.36em] font-bold flex items-center justify-center gap-3 md:gap-4 hover:bg-[#003824] transition-all duration-500 shadow-xl shadow-[#004A30]/10"
+      >
+        Mesajı Gönder
+        <Send
+          size={14}
+          className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
+        />
+      </button>
+    </form>
+  </div>
+</div>
         </div>
       </div>
     </main>

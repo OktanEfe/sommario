@@ -2,19 +2,19 @@
 import React, { useState } from "react";
 import { Send } from "lucide-react";
 
-const FranchiseForm = () => {
+const CareerForm = () => {
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
 
   return (
-    <section id="franchise-form" className="py-24 md:py-32 bg-white">
+    <section id="career-form" className="py-24 md:py-32 bg-white">
       <div className="max-w-[860px] mx-auto px-5 sm:px-6 md:px-8">
         <div className="border border-black/[0.05] rounded-[2.5rem] md:rounded-[3rem] p-6 sm:p-8 md:p-12 xl:p-16 shadow-sm bg-white">
           <div className="text-center mb-10 md:mb-12 space-y-4">
             <h2 className="text-[32px] md:text-[42px] font-light tracking-tighter text-[#231F20]">
-              Başvuru Formu
+              Kariyer Başvuru Formu
             </h2>
             <p className="text-[15px] md:text-[16px] text-black/55 font-light leading-relaxed max-w-xl mx-auto">
-              Bilgilerinizi bırakın, franchise sürecine dair sizi en kısa sürede bilgilendirelim.
+              Bilgilerinizi bırakın, uygun pozisyonlar için sizi değerlendirelim.
             </p>
           </div>
 
@@ -27,7 +27,7 @@ const FranchiseForm = () => {
           >
             {status === "success" && (
               <div className="rounded-2xl bg-[#004A30]/6 border border-[#004A30]/10 px-5 py-4 text-sm text-[#004A30] font-medium">
-                Başvurunuz başarıyla alındı. En kısa sürede sizinle iletişime geçeceğiz.
+                Başvurunuz başarıyla alındı. Uygun görülmesi halinde sizinle iletişime geçeceğiz.
               </div>
             )}
 
@@ -76,26 +76,30 @@ const FranchiseForm = () => {
 
               <div className="space-y-3">
                 <label className="block text-[11px] md:text-[12px] uppercase tracking-[0.18em] text-black font-bold ml-1">
-                  Hedeflenen Şehir / Bölge
+                  Başvurulan Pozisyon
                 </label>
-                <input
-                  type="text"
-                  name="city"
-                  className="w-full p-4 md:p-5 bg-[#FAF9F6] rounded-2xl text-sm md:text-[15px] text-black placeholder:text-black/35 outline-none border border-black/[0.05] focus:border-[#004A30]/30 focus:ring-2 focus:ring-[#004A30]/10 transition-all"
-                  placeholder="Örn. İstanbul / İzmir / Bursa"
-                />
+                <select
+                  name="position"
+                  defaultValue="Barista"
+                  className="w-full p-4 md:p-5 bg-[#FAF9F6] rounded-2xl text-sm md:text-[15px] text-black outline-none border border-black/[0.05] focus:border-[#004A30]/30 focus:ring-2 focus:ring-[#004A30]/10 transition-all appearance-none cursor-pointer"
+                >
+                  <option>Barista</option>
+                  <option>Dış Alan Sorumlusu</option>
+                  <option>Mağaza Sorumlusu</option>
+                  <option>Diğer</option>
+                </select>
               </div>
             </div>
 
             <div className="space-y-3">
               <label className="block text-[11px] md:text-[12px] uppercase tracking-[0.18em] text-black font-bold ml-1">
-                Yatırım Bütçesi ve Notlar
+                Kısa Ön Yazı
               </label>
               <textarea
                 name="message"
                 rows={5}
                 className="w-full p-4 md:p-5 bg-[#FAF9F6] rounded-2xl text-sm md:text-[15px] text-black placeholder:text-black/35 outline-none border border-black/[0.05] focus:border-[#004A30]/30 focus:ring-2 focus:ring-[#004A30]/10 transition-all resize-none"
-                placeholder="Yatırım bütçeniz, hedefiniz ve eklemek istedikleriniz..."
+                placeholder="Kendinizden ve neden Sommario’da çalışmak istediğinizden kısaca bahsedin..."
               />
             </div>
 
@@ -137,4 +141,4 @@ const FranchiseForm = () => {
   );
 };
 
-export default FranchiseForm;
+export default CareerForm;
