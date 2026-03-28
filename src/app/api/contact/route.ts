@@ -1,28 +1,39 @@
 import { Resend } from "resend";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
+import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   try {
     const body = await req.json();
 
-    const { name, email, message } = body;
+    const apiKey = process.env.RESEND_API_KEY;
 
-    const data = await resend.emails.send({
-      from: "Sommario <onboarding@resend.dev>",
-      to: ["seninmailin@gmail.com"], // şimdilik kendi mailin
-      subject: `Yeni İletişim Formu - ${name}`,
+    if (!apiKey) {
+      return NextResponse.json(
+        { error: "RESEND_API_KEY tanımlı değil." },
+        { status: 500 }
+      );
+    }
+
+    const resend = new Resend(apiKey);
+
+    await resend.emails.send({
+      from: "onboarding@resend.dev",
+      to: "seninmailin@gmail.com",
+      subject: "Yeni iletişim formu",
       html: `
-        <h2>Yeni Mesaj</h2>
-        <p><strong>İsim:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Mesaj:</strong></p>
-        <p>${message}</p>
+        <h2>Yeni mesaj</h2>
+        <p><strong>Ad:</strong> ${body.name || "-"}</p>
+        <p><strong>E-posta:</strong> ${body.email || "-"}</p>
+        <p><strong>Mesaj:</strong> ${body.message || "-"}</p>
       `,
     });
 
-    return Response.json({ success: true });
+    return NextResponse.json({ success: true });
   } catch (error) {
-    return Response.json({ error: "Mail gönderilemedi" }, { status: 500 });
+    console.error("Contact API error:", error);
+    return NextResponse.json(
+      { error: "Mail gönderilemedi." },
+      { status: 500 }
+    );
   }
 }
