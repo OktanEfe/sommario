@@ -81,7 +81,7 @@ const Footer = () => {
   </span>
 
   <div className="flex-shrink-0 w-9 h-9 md:w-10 md:h-10 rounded-full border border-black/5 flex items-center justify-center group-hover:bg-[#004A30] group-hover:text-white transition-all">
-    <ArrowUpRight size={16} className="md:size-[18px]" />
+    <ArrowUpRight size={15} className="md:size-[18px]" />
   </div>
 </a>
               <div className="flex items-center gap-4 pt-4">
