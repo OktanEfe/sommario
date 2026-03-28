@@ -68,20 +68,22 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* E-posta Yönlendirme Alanı */}
           <div className="lg:col-span-2 space-y-8">
             <h4 className="text-[10px] uppercase tracking-[0.3em] font-bold text-[#004A30]">İletişim</h4>
             <div className="space-y-4">
               <p className="text-xs uppercase tracking-widest text-black/30 font-bold">Sorularınız için</p>
               <a 
-                href="mailto:info@sommario.com.tr" 
-                className="group flex items-center gap-4 text-2xl md:text-3xl font-serif italic text-black/70 hover:text-[#004A30] transition-all duration-500"
-              >
-                info@sommario.com.tr
-                <div className="w-10 h-10 rounded-full border border-black/5 flex items-center justify-center group-hover:bg-[#004A30] group-hover:text-white transition-all">
-                  <ArrowUpRight size={18} />
-                </div>
-              </a>
+  href="mailto:info@sommario.com.tr" 
+  className="group flex flex-wrap items-center gap-3 md:gap-4 text-lg sm:text-xl md:text-2xl lg:text-3xl font-serif italic text-black/70 hover:text-[#004A30] transition-all duration-500 break-all"
+>
+  <span className="leading-tight">
+    info@sommario.com.tr
+  </span>
+
+  <div className="flex-shrink-0 w-9 h-9 md:w-10 md:h-10 rounded-full border border-black/5 flex items-center justify-center group-hover:bg-[#004A30] group-hover:text-white transition-all">
+    <ArrowUpRight size={16} className="md:size-[18px]" />
+  </div>
+</a>
               <div className="flex items-center gap-4 pt-4">
                 <div className="h-[1px] w-8 bg-[#004A30]/20"></div>
                 <p className="text-[10px] uppercase tracking-[0.4em] text-black/30 font-bold">Sommario Atölye</p>
@@ -90,7 +92,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Alt Kısım */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-black/[0.05] gap-8">
           <p className="text-[10px] uppercase tracking-widest text-black/30 font-medium">
             © {currentYear} Sommario Coffee Roastery. Tüm hakları saklıdır.

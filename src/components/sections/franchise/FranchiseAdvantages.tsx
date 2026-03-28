@@ -46,12 +46,12 @@ const FranchiseAdvantages = () => {
       <div className="relative max-w-[1280px] mx-auto px-8">
 
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-          <div className="max-w-xl space-y-4">
+          <div className="max-w-xl ">
             <span className="text-[10px] tracking-[0.4em] uppercase text-white/60 font-semibold">
               Neden Biz?
             </span>
 
-            <h2 className="text-4xl font-light tracking-tighter text-white">
+            <h2 className="text-4xl font-light tracking-tighter text-white text-center">
               Sommario Yatırımcısına <br />
               <span className="italic">ne sunar?</span>
             </h2>

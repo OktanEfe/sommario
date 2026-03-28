@@ -29,8 +29,8 @@ export const stores: Store[] = [
       open: "09:00",
       close: "00:00",
     },
-    mainImage: "/stores/kent-meydani/main.webp",
-    gallery: [],
+    mainImage: "/magaza/degirmendere/hero.webp",
+    gallery: ["/magaza/degirmendere/hero.webp"],
   },
   {
     id: 2,
@@ -59,7 +59,7 @@ export const stores: Store[] = [
       close: "00:30",
     },
     mainImage: "/stores/arasta/main.webp",
-    gallery: [],
+    gallery: ["/magaza/degirmendere/hero.webp"],
   },
   {
     id: 4,
@@ -73,9 +73,12 @@ export const stores: Store[] = [
       open: "08:00",
       close: "00:00",
     },
-    mainImage: "/stores/degirmendere/main.webp",
-    gallery: [],
-  },
+    mainImage: "/magaza/degirmendere/main.webp",
+    gallery: [
+      "/magaza/degirmendere/hero.webp",
+      "/magaza/degirmendere/hero2.webp",
+      "/magaza/degirmendere/hero.webp",
+    ],  },
   {
     id: 5,
     slug: "kosekoy",

@@ -23,7 +23,7 @@ const RecruitmentProcess = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 relative">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 relative">
 
           {steps.map((step, i) => (
             <motion.div 

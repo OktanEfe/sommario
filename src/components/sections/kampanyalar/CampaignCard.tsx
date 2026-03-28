@@ -9,11 +9,11 @@ export const CampaignCard = ({ campaign }: { campaign: Campaign }) => {
       className="group flex flex-col md:flex-row bg-[#FAF9F6] rounded-[3rem] overflow-hidden transition-all hover:shadow-2xl hover:-translate-y-1 border border-black/[0.02]"
     >
       <div className="w-full md:w-[45%] aspect-[4/3] md:aspect-auto relative overflow-hidden">
-        <img 
-          src={campaign.image} 
-          alt={campaign.title} 
-          className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
-        />
+  <img 
+    src={campaign.image} 
+    alt={campaign.title} 
+    className="w-full h-full object-cover scale-90 md:scale-95 transition-transform duration-700 group-hover:scale-100" 
+  />
         {campaign.badge && (
           <div className="absolute top-8 left-8 bg-white/90 backdrop-blur-md px-5 py-2 rounded-full shadow-sm">
             <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#004A30]">

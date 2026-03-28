@@ -17,7 +17,7 @@ export interface Campaign {
   subtitle: "Filtre Kahvenin En Yakın Arkadaşı: En Taze Pastalar",
   description: "Ferahlatıcı soğuk filtre kahve ve enfes pastalarla keyfinizi ikiye katlayın.",
   content: "Özellikle sıcak günlerde ferahlatıcı bir mola arayanlar için soğuk filtre kahve ve günlük pastalarımız mükemmel bir uyum sunuyor. Hafif, serin ve lezzet dolu bu deneyimi kaçırmayın.",
-  image: "/campaigns/cold-filter-cake.jpg",
+  image: "/kampanya/soguk.webp",
   badge: "Yeni"
     },
     {
@@ -27,7 +27,7 @@ export interface Campaign {
       subtitle: "Sıcak Bir Yudum, Tatlı Bir Dokunuş.",
       description: "Sıcak bir kahve ve taptaze bir pasta ile günün en keyifli molasını verin.",
       content: "Yoğun geçen günün ortasında kendinize küçük bir ödül verin. Özenle demlenmiş sıcak filtre kahveniz ve günlük taze pastalarımız, özel fiyatıyla sizi bekliyor. Günün temposuna kısa ama lezzetli bir mola verin.",
-      image: "/campaigns/hot-filter-cake.jpg",
+      image: "/kampanya/sıcak.webp",
       badge: "Popüler"
     },
     {
