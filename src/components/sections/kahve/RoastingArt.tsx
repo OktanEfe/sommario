@@ -16,7 +16,7 @@ const RoastingArt = () => {
             <div className="relative aspect-square md:aspect-[4/5] bg-black/10 rounded-[2.5rem] md:rounded-[3rem] border border-white/5 overflow-hidden shadow-2xl">
               {/* ANA GÖRSEL */}
               <img 
-                src="/images/roasting-process.jpg" 
+                src="/kahve/yesil.webp" 
                 alt="Sommario Kavurma Süreci"
                 className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-1000"
               />

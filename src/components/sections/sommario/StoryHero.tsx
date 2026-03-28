@@ -55,7 +55,7 @@ const StoryHero = () => {
         >
           <div className="absolute inset-0 rounded-[3rem] overflow-hidden shadow-2xl shadow-black/5 border border-black/[0.03]">
             <img 
-              src="/path-to-your-uploaded-image.jpg" 
+              src="/sommario/hero.webp" 
               alt="Sommario Brewing Craft" 
               className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-1000"
             />

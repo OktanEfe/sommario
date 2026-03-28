@@ -15,10 +15,11 @@ export interface BlogPost {
       slug: "barista-workshop-2024",
       title: "Evde Kusursuz Kahve Demleme Workshop'u",
       category: "Aktivite",
-      date: "15 Mart 2024",
+      date: "5 Aralık 2025",
       excerpt: "Kahve tutkunlarıyla bir araya gelerek V60 ve Chemex tekniklerini inceledik.",
-      content: "Geçtiğimiz hafta sonu Arastapark mağazamızda gerçekleştirdiğimiz etkinlikte, katılımcılarımıza nitelikli kahve çekirdeklerinin yolculuğunu ve evde profesyonel demleme tekniklerini anlattık...",
-      image: "/blog/workshop.jpg"
+      content: "Tasarımın Kahveyle Buluştuğu Nokta: TMMOB Mimarlar Odası Coffee Workshop Ekim 2024’te, estetiği ve fonksiyonelliği hayatın merkezine koyan TMMOB Mimarlar Odası üyeleriyle bir araya gelerek hafızalarda iz bırakan bir Coffee Workshop gerçekleştirdik.​Mimari projelerdeki o hassas dengeyi, bu kez kahve fincanlarına taşıdık. Etkinliğimiz boyunca katılımcılarla birlikte nitelikli kahvenin teorik dünyasından pratik uygulama tekniklerine kadar geniş bir yelpazeyi keşfettik.​Etkinlikte Neler Mi Yaptık?Çekirdekten Fincana Yolculuk: Kahvenin yetişme koşullarından hasat süreçlerine, mimari bir yapının temeli gibi kahvenin de karakterini belirleyen unsurları inceledik.​Demleme Teknikleri: V60, Chemex ve Aeropress gibi farklı yöntemlerle 'altın oran' arayışımızı demleme parametreleri üzerinden sürdürdük.Tadım (Cupping) Seansı: Farklı coğrafyaların aroma profillerini analiz ederek duyusal bir keşfe çıktık.​Sommario Coffee Company olarak, detaylara önem veren ve 'iyi tasarımı' hayatın her alanında arayan mimarlarımızla bu deneyimi paylaşmak bizim için büyük bir keyifti. Kahvenin birleştirici gücüyle, yaratıcılığın ve sohbetin ön planda olduğu bu özel gün için tüm katılımcılara teşekkür ederiz.Yeni workshoplarda ve taze demlenmiş kahve kokularında buluşmak üzere."
+,
+      image: "/blog/tmb.webp"
     },
     {
       id: 2,
@@ -28,7 +29,7 @@ export interface BlogPost {
       date: "2 Şubat 2024",
       excerpt: "Meyvemsi notaları ve gövdeli yapısıyla yeni Etiyopya serimizi keşfettik.",
       content: "Yeni sezonun en iddialı çekirdeklerinden biri olan Etiyopya Guji için düzenlediğimiz tadım etkinliğinde, kahvenin yetiştiği rakımdan işleme yöntemine kadar tüm detayları paylaştık...",
-      image: "/blog/tadim.jpg"
+      image: "/blog/turkkahvesi.webp"
     },
     {
       id: 3,
@@ -38,6 +39,6 @@ export interface BlogPost {
       date: "20 Ocak 2024",
       excerpt: "Yerel sanatçılarımızın eserleri eşliğinde keyifli bir akşam geçirdik.",
       content: "Sommario sadece bir kahve dükkanı değil, bir yaşam alanı. Sanatçılarımızla gerçekleştirdiğimiz bu özel gecede tabloların gölgesinde en sevdiğimiz blendleri yudumladık...",
-      image: "/blog/sanat.jpg"
+      image: "/blog/universite.webp"
     }
   ];
