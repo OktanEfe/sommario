@@ -4,37 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Star, ChevronLeft, ChevronRight, Sparkles, RotateCcw, ArrowLeft } from 'lucide-react';
 import { useRef, useState } from 'react';
-import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Menü",
-  description:
-    "Sommario Roastery menüsünü keşfedin. Kahveler, özel içecekler ve lezzetli seçeneklerle size en uygun tatları inceleyin.",
-  keywords: [
-    "Sommario menü",
-    "kahve menüsü",
-    "espresso",
-    "filtre kahve",
-    "soğuk kahve",
-    "içecek menüsü",
-    "cafe menü",
-  ],
-  alternates: {
-    canonical: "https://sommario.com.tr/menu",
-  },
-  openGraph: {
-    title: "Menü | Sommario Roastery",
-    description:
-      "Kahveler, özel içecekler ve özenle hazırlanan lezzetleri Sommario Roastery menüsünde keşfedin.",
-    url: "https://sommario.com.tr/menu",
-    type: "website",
-  },
-  twitter: {
-    title: "Menü | Sommario Roastery",
-    description:
-      "Kahveler, özel içecekler ve özenle hazırlanan lezzetleri Sommario Roastery menüsünde keşfedin.",
-  },
-};
 const globalStyles = `
   @keyframes fadeSlideUp {
     from { opacity: 0; transform: translateY(16px); }

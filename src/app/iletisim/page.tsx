@@ -11,36 +11,7 @@ import {
   Twitter,
   ArrowUpRight,
 } from "lucide-react";
-import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "İletişim",
-  description:
-    "Sommario Roastery ile iletişime geçin. Marka, iş birliği, franchise, kariyer ve genel sorularınız için bize kolayca ulaşabilirsiniz.",
-  keywords: [
-    "Sommario iletişim",
-    "kahve markası iletişim",
-    "franchise iletişim",
-    "iş birliği",
-    "Sommario ulaşım",
-    "iletişim formu",
-  ],
-  alternates: {
-    canonical: "https://sommario.com.tr/iletisim",
-  },
-  openGraph: {
-    title: "İletişim | Sommario Roastery",
-    description:
-      "Marka, iş birliği, franchise ve genel sorularınız için Sommario Roastery ile iletişime geçin.",
-    url: "https://sommario.com.tr/iletisim",
-    type: "website",
-  },
-  twitter: {
-    title: "İletişim | Sommario Roastery",
-    description:
-      "Marka, iş birliği, franchise ve genel sorularınız için Sommario Roastery ile iletişime geçin.",
-  },
-};
 export default function ContactPage() {
   const socialLinks = [
     {

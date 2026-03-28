@@ -1,35 +1,6 @@
 import { stores } from '@/data/stores';
 import { StoreCard } from '@/components/sections/magazalarimiz/StoreCard';
-import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Mağazalarımız",
-  description:
-    "Sommario Roastery mağazalarını keşfedin. Size en yakın lokasyonu bulun ve kahve deneyimini yerinde yaşayın.",
-  keywords: [
-    "Sommario mağazalar",
-    "kahve mağazaları",
-    "Sommario şubeler",
-    "cafe lokasyonları",
-    "yakınımdaki Sommario",
-    "kahve dükkanı adres",
-  ],
-  alternates: {
-    canonical: "https://sommario.com.tr/magazalarimiz",
-  },
-  openGraph: {
-    title: "Mağazalarımız | Sommario Roastery",
-    description:
-      "Size en yakın Sommario Roastery mağazasını bulun ve kahve deneyimini yerinde keşfedin.",
-    url: "https://sommario.com.tr/magazalarimiz",
-    type: "website",
-  },
-  twitter: {
-    title: "Mağazalarımız | Sommario Roastery",
-    description:
-      "Size en yakın Sommario Roastery mağazasını bulun ve kahve deneyimini yerinde keşfedin.",
-  },
-};
 export default function MagazalarPage() {
   return (
     <section className="py-40 bg-white">
