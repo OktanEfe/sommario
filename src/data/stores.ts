@@ -43,7 +43,7 @@ export const stores: Store[] = [
       open: "08:00",
       close: "00:00",
     },
-    mainImage: "/magaza/kaptann.png",
+    mainImage: "/magaza/kaptann.webp",
     gallery: [],
   },
   {
