@@ -1,3 +1,9 @@
+import { notFound } from "next/navigation";
+
+export default function StoreSlugPage() {
+  return notFound();
+}
+
 // import { stores } from "@/data/stores";
 // import { notFound } from "next/navigation";
 // import Image from "next/image";
