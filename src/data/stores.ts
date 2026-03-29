@@ -29,7 +29,7 @@ export const stores: Store[] = [
       open: "09:00",
       close: "00:00",
     },
-    mainImage: "/magaza/Çarşı.jpg",
+    mainImage: "/magaza/Çarşı.webp",
     gallery: ["/magaza/degirmendere/hero.webp"],
   },
   {
@@ -58,7 +58,7 @@ export const stores: Store[] = [
       open: "09:00",
       close: "00:30",
     },
-    mainImage: "/magaza/Arasta.jpg",
+    mainImage: "/magaza/Arasta.webp",
     gallery: ["/magaza/degirmendere/hero.webp"],
   },
   {
@@ -73,7 +73,7 @@ export const stores: Store[] = [
       open: "08:00",
       close: "00:00",
     },
-    mainImage: "/magaza/Değirmendere .JPG",
+    mainImage: "/magaza/Değirmendere .webp",
     gallery: [
       "/magaza/hero.webp",
       "/magaza/hero2.webp",
@@ -90,7 +90,7 @@ export const stores: Store[] = [
       open: "",
       close: "",
     },
-    mainImage: "/magaza/Köseköy.jpg",
+    mainImage: "/magaza/Köseköy.webp",
     gallery: [],
   },
 ];
