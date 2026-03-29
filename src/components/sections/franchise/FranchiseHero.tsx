@@ -3,11 +3,10 @@ import React from "react";
 
 const FranchiseHero = () => {
   return (
-    <section className="relative overflow-hidden bg-white pt-28 pb-20 md:pt-36 md:pb-28 xl:pt-44 xl:pb-36">
+    <section className="relative overflow-hidden bg-white pt-20 pb-20 md:pt-36 md:pb-28 xl:pt-44 xl:pb-36">
       <div className="max-w-[1280px] mx-auto px-6 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 md:gap-16 xl:gap-20">
           
-          {/* SOL: YAZI */}
           <div className="relative z-10 max-w-[620px] xl:max-w-[680px] space-y-6 md:space-y-8">
             <span className="block text-[10px] md:text-[11px] tracking-[0.45em] uppercase text-[#004A30] font-semibold">
               İş Ortaklığı
@@ -26,7 +25,6 @@ const FranchiseHero = () => {
             </p>
           </div>
 
-          {/* SAĞ: FOTO */}
           <div className="relative z-10 order-last lg:order-none">
             <div className="relative w-full max-w-[420px] md:max-w-[520px] xl:max-w-[560px] ml-auto mr-auto lg:mr-0 aspect-[4/5] overflow-hidden rounded-[2.5rem] md:rounded-[3rem] shadow-[0_20px_60px_rgba(0,0,0,0.08)]">
               <img
@@ -35,7 +33,6 @@ const FranchiseHero = () => {
                 className="w-full h-full object-cover scale-[1.02]"
               />
 
-              {/* kenar yumuşatma */}
               <div className="absolute inset-0 bg-gradient-to-l from-white/10 via-transparent to-white/35" />
               <div className="absolute inset-0 shadow-[inset_0_0_80px_rgba(255,255,255,0.22)] rounded-[2.5rem] md:rounded-[3rem]" />
             </div>

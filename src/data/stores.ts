@@ -29,7 +29,7 @@ export const stores: Store[] = [
       open: "09:00",
       close: "00:00",
     },
-    mainImage: "/magaza/degirmendere/hero.webp",
+    mainImage: "/magaza/Çarşı.jpg",
     gallery: ["/magaza/degirmendere/hero.webp"],
   },
   {
@@ -43,7 +43,7 @@ export const stores: Store[] = [
       open: "08:00",
       close: "00:00",
     },
-    mainImage: "/stores/kaptan-subesi/main.webp",
+    mainImage: "/magaza/kaptann.png",
     gallery: [],
   },
   {
@@ -58,7 +58,7 @@ export const stores: Store[] = [
       open: "09:00",
       close: "00:30",
     },
-    mainImage: "/stores/arasta/main.webp",
+    mainImage: "/magaza/Arasta.jpg",
     gallery: ["/magaza/degirmendere/hero.webp"],
   },
   {
@@ -73,24 +73,24 @@ export const stores: Store[] = [
       open: "08:00",
       close: "00:00",
     },
-    mainImage: "/magaza/degirmendere/main.webp",
+    mainImage: "/magaza/Değirmendere .JPG",
     gallery: [
-      "/magaza/degirmendere/hero.webp",
-      "/magaza/degirmendere/hero2.webp",
-      "/magaza/degirmendere/hero.webp",
+      "/magaza/hero.webp",
+      "/magaza/hero2.webp",
+      "/magaza/main.webp",
     ],  },
   {
     id: 5,
     slug: "kosekoy",
     name: "Köseköy",
-    status: "soon",
+    status: "active",
     address: "Dumlupınar, Atlas Sk. No: 102, 41250 Kartepe/Kocaeli",
     phone: "",
     openingHours: {
       open: "",
       close: "",
     },
-    mainImage: "/stores/kosekoy/main.webp",
+    mainImage: "/magaza/Köseköy.jpg",
     gallery: [],
   },
 ];

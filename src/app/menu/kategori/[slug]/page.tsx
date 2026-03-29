@@ -7,6 +7,14 @@ import { ChevronLeft } from 'lucide-react';
 export async function generateStaticParams() {
   return categories.map(c => ({ slug: c.slug }));
 }
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const category = categories.find(c => c.slug === slug);
+  return {
+    title: category?.name ?? 'Menü',
+    description: `Sommario ${category?.name ?? ''} kategorisindeki ürünleri keşfedin.`,
+  }
+}
 
 export default async function CategoryPage({ 
   params 

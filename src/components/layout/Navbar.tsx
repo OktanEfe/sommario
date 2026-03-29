@@ -100,12 +100,12 @@ const Navbar = () => {
             </div>
           </div>
 
-          <Link
+          {/* <Link
             href="/menu"
             className="text-[13px] font-semibold tracking-[0.14em] text-[#231F20]/80 hover:text-[#004A30] uppercase transition-colors"
           >
             Menü
-          </Link>
+          </Link> */}
 
           <Link
             href="/kariyer"
@@ -237,7 +237,7 @@ const Navbar = () => {
           </div>
 
           {[
-            { href: "/menu", label: "Menü" },
+            // { href: "/menu", label: "Menü" },
             { href: "/kariyer", label: "Kariyer" },
             { href: "/franchise", label: "Franchıse" },
           ].map((item, i) => (

@@ -1,6 +1,26 @@
 import { blogPosts } from '@/data/blog';
 import { BlogCard } from '@/components/sections/blog/BlogCard';
 
+
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog",
+  description: "Sommario Roastery'nin kahve dünyasından yazılar, demleme rehberleri ve özel hikayeler.",
+  keywords: ["kahve blog", "demleme rehberi", "Sommario blog", "kahve kültürü", "specialty coffee"],
+  alternates: { canonical: "https://sommario.com.tr/blog" },
+  openGraph: {
+    title: "Blog | Sommario Roastery",
+    description: "Sommario Roastery'nin kahve dünyasından yazılar, demleme rehberleri ve özel hikayeler.",
+    url: "https://sommario.com.tr/blog",
+    type: "website",
+  },
+  twitter: {
+    title: "Blog | Sommario Roastery",
+    description: "Sommario Roastery'nin kahve dünyasından yazılar, demleme rehberleri ve özel hikayeler.",
+  },
+};
 export default function BlogPage() {
   return (
     <main className="pt-40 pb-20 bg-white">

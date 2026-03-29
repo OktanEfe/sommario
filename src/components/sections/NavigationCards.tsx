@@ -6,9 +6,9 @@ import { ArrowRight } from 'lucide-react';
 
 const cards = [
   {
-    title: "Menümüzü Keşfedin",
-    desc: "Özenle seçilmiş çekirdeklerden hazırlanan eşsiz lezzetler ve özel reçeteler.",
-    link: "/menu",
+    title: "Bizi Tanıyın",
+    desc: "Özenle seçilmiş çekirdeklerden hazırlanan eşsiz lezzetler ve özel reçetelerimizi görün.",
+    link: "/sommario",
     theme: "green"
   },
   {

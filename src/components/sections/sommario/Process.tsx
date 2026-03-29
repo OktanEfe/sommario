@@ -1,6 +1,8 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from "next/image";
+
 
 const Process = () => {
   const steps = [
@@ -27,19 +29,25 @@ const Process = () => {
         <div className="flex flex-col lg:flex-row items-center gap-24">
           
           <div className="w-full lg:w-1/2 relative group">
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1 }}
-              className="relative aspect-[4/5] rounded-[3rem] overflow-hidden bg-[#FAF9F6] border border-black/[0.03]"
-            >
-              <div className="absolute inset-0 bg-gradient-to-tr from-black/20 via-transparent to-transparent z-10" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                 <span className="text-[10px] uppercase tracking-[0.5em] text-black/10 font-bold rotate-90">
-                   Sommario Roastery 2018
-                 </span>
-              </div>
-            </motion.div>
+
+          <motion.div 
+  initial={{ opacity: 0, scale: 0.95 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 1 }}
+  className="relative aspect-[4/5] rounded-[3rem] overflow-hidden bg-[#FAF9F6] border border-black/[0.03]"
+>
+  {/* IMAGE */}
+  <Image
+    src="/sommario/coffee.png"
+    alt="Sommario Coffee"
+    fill
+    className="object-cover"
+    priority
+  />
+
+  {/* Gradient overlay */}
+  <div className="absolute inset-0 bg-gradient-to-tr from-black/10 via-transparent to-transparent z-10 pointer-events-none" />
+</motion.div>
 
             <motion.div 
               whileHover={{ rotate: 0, scale: 1.05 }}

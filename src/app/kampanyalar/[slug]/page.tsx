@@ -7,6 +7,14 @@ import { ChevronLeft, Calendar, Info } from 'lucide-react';
 export async function generateStaticParams() {
   return campaigns.map(c => ({ slug: c.slug }));
 }
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const campaign = campaigns.find(c => c.slug === slug);
+  return {
+    title: campaign?.title ?? 'Kampanya',
+    description: campaign?.subtitle ?? '',
+  }
+}
 
 export default async function CampaignDetailPage({ 
   params 
@@ -23,14 +31,13 @@ export default async function CampaignDetailPage({
       <div className="max-w-[1100px] mx-auto px-6 md:px-8">
         <Link
           href="/kampanyalar"
-          className="flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-black/40 hover:text-[#004A30] transition-colors mb-10 md:mb-12"
+          className="flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-black/70 hover:text-[#004A30] transition-colors mb-10 md:mb-12"
         >
           <ChevronLeft size={14} /> Tüm Kampanyalara Dön
         </Link>
 
         <div className="grid grid-cols-1 md:grid-cols-[340px_minmax(0,1fr)] lg:grid-cols-[380px_minmax(0,1fr)] xl:grid-cols-[420px_minmax(0,1fr)] gap-10 md:gap-14 xl:gap-16 items-start">
           
-          {/* SOL FOTOĞRAF */}
           <div className="self-start w-full">
             <div className="sticky top-32">
               <div className="relative w-full max-w-[260px] sm:max-w-[300px] md:max-w-full mx-auto aspect-[4/5] rounded-[2.2rem] md:rounded-[3rem] overflow-hidden bg-[#FAF9F6] shadow-2xl shadow-black/5">
@@ -45,7 +52,6 @@ export default async function CampaignDetailPage({
             </div>
           </div>
 
-          {/* SAĞ İÇERİK */}
           <div className="space-y-10 py-2 md:py-4">
             <div className="space-y-4">
               <div className="flex items-center gap-3 flex-wrap">
@@ -53,7 +59,7 @@ export default async function CampaignDetailPage({
                   {campaign.badge || "Sommario Özel"}
                 </span>
 
-                <div className="flex items-center gap-1 text-[9px] text-black/30 uppercase tracking-widest">
+                <div className="flex items-center gap-1 text-[9px] text-black/70 uppercase tracking-widest">
                   <Calendar size={12} /> Sınırlı Süre
                 </div>
               </div>
@@ -70,7 +76,7 @@ export default async function CampaignDetailPage({
             <div className="h-[1px] w-full bg-black/5" />
 
             <div className="prose prose-sm max-w-none">
-              <p className="text-base md:text-lg text-black/60 leading-relaxed font-light">
+              <p className="text-base md:text-lg text-black/70 leading-relaxed font-light">
                 {campaign.content}
               </p>
             </div>

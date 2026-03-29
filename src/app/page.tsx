@@ -10,7 +10,7 @@ export default function Home() {
     <div className="flex flex-col w-full">
       <Hero />
       <About />
-      <FeaturedDrinks /> 
+      {/* <FeaturedDrinks />  */}
       
       <NavigationCards />
       <ContactCTA /> 

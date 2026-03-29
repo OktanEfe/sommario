@@ -19,9 +19,37 @@ const CareerForm = () => {
           </div>
 
           <form
-            onSubmit={(e) => {
+            onSubmit={async (e) => {
               e.preventDefault();
-              setStatus("success");
+              setStatus("idle");
+            
+              const form = e.currentTarget;
+              const formData = new FormData(form);
+            
+              const payload = {
+                formType: "career",
+                name: formData.get("name"),
+                email: formData.get("email"),
+                phone: formData.get("phone"),
+                position: formData.get("position"),
+                message: formData.get("message"),
+                kvkk: formData.get("kvkk"),
+              };
+            
+              const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(payload),
+              });
+            
+              if (res.ok) {
+                setStatus("success");
+                form.reset();
+              } else {
+                setStatus("error");
+              }
             }}
             className="space-y-7 md:space-y-8"
           >
@@ -45,6 +73,7 @@ const CareerForm = () => {
                 <input
                   type="text"
                   name="name"
+                  required
                   className="w-full p-4 md:p-5 bg-[#FAF9F6] rounded-2xl text-sm md:text-[15px] text-black placeholder:text-black/35 outline-none border border-black/[0.05] focus:border-[#004A30]/30 focus:ring-2 focus:ring-[#004A30]/10 transition-all"
                   placeholder="İsminiz nedir?"
                 />
@@ -57,6 +86,7 @@ const CareerForm = () => {
                 <input
                   type="email"
                   name="email"
+                  required
                   className="w-full p-4 md:p-5 bg-[#FAF9F6] rounded-2xl text-sm md:text-[15px] text-black placeholder:text-black/35 outline-none border border-black/[0.05] focus:border-[#004A30]/30 focus:ring-2 focus:ring-[#004A30]/10 transition-all"
                   placeholder="E-posta adresiniz"
                 />
@@ -69,6 +99,7 @@ const CareerForm = () => {
                 <input
                   type="tel"
                   name="phone"
+                  required
                   className="w-full p-4 md:p-5 bg-[#FAF9F6] rounded-2xl text-sm md:text-[15px] text-black placeholder:text-black/35 outline-none border border-black/[0.05] focus:border-[#004A30]/30 focus:ring-2 focus:ring-[#004A30]/10 transition-all"
                   placeholder="Telefon numaranız"
                 />
@@ -98,6 +129,7 @@ const CareerForm = () => {
               <textarea
                 name="message"
                 rows={5}
+                required
                 className="w-full p-4 md:p-5 bg-[#FAF9F6] rounded-2xl text-sm md:text-[15px] text-black placeholder:text-black/35 outline-none border border-black/[0.05] focus:border-[#004A30]/30 focus:ring-2 focus:ring-[#004A30]/10 transition-all resize-none"
                 placeholder="Kendinizden ve neden Sommario’da çalışmak istediğinizden kısaca bahsedin..."
               />

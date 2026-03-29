@@ -9,7 +9,6 @@ const Footer = () => {
     <footer className="bg-[#FAF9F6] pt-24 pb-12 border-t border-black/[0.03]">
       <div className="max-w-[1280px] mx-auto px-8">
         
-        {/* Üst Kısım: Marka ve Hızlı Link Kartları */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 mb-24">
           <div className="space-y-8">
             <h2 className="text-7xl md:text-8xl font-light tracking-tighter text-[#004A30] opacity-90">
@@ -39,12 +38,11 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Link Grupları ve İletişim Alanı */}
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-24 border-t border-black/[0.05] pt-24">
           <div className="space-y-6">
             <h4 className="text-[10px] uppercase tracking-[0.3em] font-bold text-[#004A30]">Kurumsal</h4>
             <ul className="space-y-4">
-              <li><Link href="/hakkimizda" className="text-sm text-black/60 hover:text-[#004A30] transition-colors font-light">Hikayemiz</Link></li>
+              <li><Link href="/sommario" className="text-sm text-black/60 hover:text-[#004A30] transition-colors font-light">Hikayemiz</Link></li>
               <li><Link href="/blog" className="text-sm text-black/60 hover:text-[#004A30] transition-colors font-light">Blog & Haberler</Link></li>
               <li><Link href="/kariyer" className="text-sm text-black/60 hover:text-[#004A30] transition-colors font-light">Kariyer</Link></li>
             </ul>
@@ -53,9 +51,9 @@ const Footer = () => {
           <div className="space-y-6">
             <h4 className="text-[10px] uppercase tracking-[0.3em] font-bold text-[#004A30]">Deneyim</h4>
             <ul className="space-y-4">
-              <li><Link href="/menu" className="text-sm text-black/60 hover:text-[#004A30] transition-colors font-light">Menü</Link></li>
+              {/* <li><Link href="/menu" className="text-sm text-black/60 hover:text-[#004A30] transition-colors font-light">Menü</Link></li> */}
               <li><Link href="/kampanyalar" className="text-sm text-black/60 hover:text-[#004A30] transition-colors font-light">Kampanyalar</Link></li>
-              <li><Link href="/etkinlikler" className="text-sm text-black/60 hover:text-[#004A30] transition-colors font-light">Etkinlikler</Link></li>
+              <li><Link href="/blog" className="text-sm text-black/60 hover:text-[#004A30] transition-colors font-light">Etkinlikler</Link></li>
             </ul>
           </div>
 
@@ -63,7 +61,7 @@ const Footer = () => {
             <h4 className="text-[10px] uppercase tracking-[0.3em] font-bold text-[#004A30]">Destek</h4>
             <ul className="space-y-4">
               <li><Link href="/iletisim" className="text-sm text-black/60 hover:text-[#004A30] transition-colors font-light">Bize Ulaşın</Link></li>
-              <li><Link href="/sss" className="text-sm text-black/60 hover:text-[#004A30] transition-colors font-light">Sıkça Sorulanlar</Link></li>
+              <li><Link href="/kariyer#CareerFAQ" className="text-sm text-black/60 hover:text-[#004A30] transition-colors font-light">Sıkça Sorulanlar</Link></li>
               <li><Link href="/kvkk" className="text-sm text-black/60 hover:text-[#004A30] transition-colors font-light">KVKK</Link></li>
             </ul>
           </div>
@@ -72,16 +70,16 @@ const Footer = () => {
             <h4 className="text-[10px] uppercase tracking-[0.3em] font-bold text-[#004A30]">İletişim</h4>
             <div className="space-y-4">
               <p className="text-xs uppercase tracking-widest text-black/30 font-bold">Sorularınız için</p>
-              <a 
-  href="mailto:info@sommario.com.tr" 
-  className="group flex flex-wrap items-center gap-3 md:gap-4 text-lg sm:text-xl md:text-2xl lg:text-3xl font-serif italic text-black/70 hover:text-[#004A30] transition-all duration-500 break-all"
+              <a
+  href="mailto:info@sommario.com.tr"
+  className="group inline-flex sm:flex items-start sm:items-center gap-3 md:gap-4 text-[17px] sm:text-xl md:text-2xl lg:text-3xl font-serif italic text-black/70 hover:text-[#004A30] transition-all duration-500 max-w-full"
 >
-  <span className="leading-tight">
+  <span className="leading-tight break-words max-w-[220px] sm:max-w-full">
     info@sommario.com.tr
   </span>
 
-  <div className="flex-shrink-0 w-9 h-9 md:w-10 md:h-10 rounded-full border border-black/5 flex items-center justify-center group-hover:bg-[#004A30] group-hover:text-white transition-all">
-    <ArrowUpRight size={15} className="md:size-[18px]" />
+  <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full border border-black/5 flex items-center justify-center group-hover:bg-[#004A30] group-hover:text-white transition-all">
+    <ArrowUpRight size={14} className="md:size-[18px]" />
   </div>
 </a>
               <div className="flex items-center gap-4 pt-4">

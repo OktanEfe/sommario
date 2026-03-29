@@ -1,3 +1,22 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "KVKK Aydınlatma Metni",
+  description: "Sommario Roastery kişisel verilerin korunması ve gizlilik politikası.",
+  alternates: { canonical: "https://sommario.com.tr/kvkk" },
+  openGraph: {
+    title: "KVKK | Sommario Roastery",
+    description: "Sommario Roastery kişisel verilerin korunması ve gizlilik politikası.",
+    url: "https://sommario.com.tr/kvkk",
+    type: "website",
+  },
+  twitter: {
+    title: "KVKK | Sommario Roastery",
+    description: "Sommario Roastery kişisel verilerin korunması ve gizlilik politikası.",
+  },
+};
+
+
 export default function KvkkPage() {
     return (
       <main className="pt-[100px] md:pt-[120px] pb-20 md:pb-28 bg-white">

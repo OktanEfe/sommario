@@ -10,7 +10,7 @@ const FeaturedDrinks = () => {
       name: "Mio", 
       note: "İmza", 
       desc: "Özel Antep fıstığı özü ve ipeksi süt dokusuyla hazırlanan, Sommario'ya özgü unutulmaz bir lezzet.",
-      image: "/drinks/mio.jpg",
+      image: "/drinks/mio.webp",
     },
     { 
       id: 2, 
@@ -38,7 +38,6 @@ const FeaturedDrinks = () => {
   return (
     <section className="py-16 sm:py-24 md:py-32 bg-[#FAF9F6] overflow-hidden">
       
-      {/* Başlık */}
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 mb-12 sm:mb-16 md:mb-24">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-8">
           <div className="space-y-3 md:space-y-4">

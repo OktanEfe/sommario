@@ -1,6 +1,25 @@
 import { campaigns } from '@/data/campaigns';
 import { CampaignCard } from '@/components/sections/kampanyalar/CampaignCard';
 
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Kampanyalar",
+  description: "Sommario Roastery'nin güncel kampanya ve fırsatlarını kaçırma. Sınırlı süreli özel teklifler.",
+  keywords: ["Sommario kampanya", "kahve kampanyası", "özel teklif", "indirim", "Sommario fırsatları"],
+  alternates: { canonical: "https://sommario.com.tr/kampanyalar" },
+  openGraph: {
+    title: "Kampanyalar | Sommario Roastery",
+    description: "Sommario Roastery'nin güncel kampanya ve fırsatlarını kaçırma.",
+    url: "https://sommario.com.tr/kampanyalar",
+    type: "website",
+  },
+  twitter: {
+    title: "Kampanyalar | Sommario Roastery",
+    description: "Sommario Roastery'nin güncel kampanya ve fırsatlarını kaçırma.",
+  },
+};
 export default function CampaignsPage() {
   return (
     <main className="pt-40 pb-20 bg-white">

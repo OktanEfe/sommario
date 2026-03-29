@@ -17,13 +17,11 @@ export interface Product {
   description: string;
   image: string;
 
-  // Kahve özellikleri
   intensity?: number;
   sweetness?: number;
   creaminess?: number;
   density?: number;
 
-  // İçerik bayrakları
   hasCoffee?: boolean;
   hasChocolate?: boolean;
   milk?: boolean;
