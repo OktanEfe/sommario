@@ -24,7 +24,7 @@ export const stores: Store[] = [
     name: "Kent Meydanı",
     status: "active",
     address: "Karabaş, Rauf Orbay Sk. No: 11, 41040 İzmit/Kocaeli",
-    phone: "0533 415 2925",
+    phone: "0 543 905 03 78",
     openingHours: {
       open: "09:00",
       close: "00:00",
@@ -38,7 +38,7 @@ export const stores: Store[] = [
     name: "Kaptan Şubesi",
     status: "active",
     address: "Alikahya Fatih, Akarca Cd. No: 14, 41310 İzmit/Kocaeli",
-    phone: "0533 415 2925",
+    phone: "0543 9050378",
     openingHours: {
       open: "08:00",
       close: "00:00",
