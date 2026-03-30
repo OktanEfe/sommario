@@ -94,11 +94,7 @@ const NavigationCards = () => {
               </div>
             </div>
 
-            <div className={`absolute -bottom-4 -right-4 text-[160px] font-bold leading-none select-none pointer-events-none opacity-[0.04] transition-all duration-1000 group-hover:scale-110 group-hover:-rotate-6 ${
-              c.theme === "white" ? "text-black" : "text-white"
-            }`}>
-              {i + 1}
-            </div>
+            
           </motion.div>
         ))}
       </div>
