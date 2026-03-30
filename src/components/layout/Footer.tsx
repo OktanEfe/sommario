@@ -15,7 +15,7 @@ const Footer = () => {
               Sommario
             </h2>
             <p className="text-xl text-black/40 font-light max-w-sm leading-relaxed">
-              Her fincanda bir hikaye, her köşede bir huzur. Nitelikli kahvenin en sar hali.
+              Her fincanda bir hikaye, her köşede bir huzur. Nitelikli kahvenin en saf hali.
             </p>
           </div>
 
@@ -96,10 +96,24 @@ const Footer = () => {
           </p>
           
           <div className="flex gap-8">
-            <a href="#" className="text-black/40 hover:text-[#004A30] transition-colors"><Instagram size={18} /></a>
-            <a href="#" className="text-black/40 hover:text-[#004A30] transition-colors"><Facebook size={18} /></a>
-            <a href="#" className="text-black/40 hover:text-[#004A30] transition-colors"><Twitter size={18} /></a>
-          </div>
+  <a
+    href="https://www.instagram.com/sommariocoffee?igsh=cDI4MXVzYmVtN3Zp"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-black/40 hover:text-[#004A30] transition-colors"
+  >
+    <Instagram size={18} />
+  </a>
+
+  <a
+    href="https://www.facebook.com/share/1bCsMuPcHt/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-black/40 hover:text-[#004A30] transition-colors"
+  >
+    <Facebook size={18} />
+  </a>
+</div>
         </div>
       </div>
     </footer>

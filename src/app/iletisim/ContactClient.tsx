@@ -11,6 +11,7 @@ import {
   Linkedin,
   Twitter,
   ArrowUpRight,
+  Facebook,
 } from "lucide-react";
 
 export default function ContantClient() {
@@ -19,21 +20,16 @@ export default function ContantClient() {
     {
       name: "Instagram",
       icon: <Instagram size={18} />,
-      link: "#",
+      link: "https://www.instagram.com/sommariocoffee?igsh=cDI4MXVzYmVtN3Zp",
       desc: "@sommariocoffee",
     },
     {
-      name: "LinkedIn",
-      icon: <Linkedin size={18} />,
-      link: "#",
-      desc: "Sommario Company",
+      name: "Facebook",
+      icon: <Facebook size={18} />,
+      link: "https://www.facebook.com/share/1bCsMuPcHt/",
+      desc: "Sommario Coffee",
     },
-    {
-      name: "X",
-      icon: <Twitter size={18} />,
-      link: "#",
-      desc: "sommario_tr",
-    },
+
   ];
 
   return (
