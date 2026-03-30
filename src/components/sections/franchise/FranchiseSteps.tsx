@@ -12,7 +12,7 @@ const FranchiseSteps = () => {
   return (
     <section className="py-24 bg-[#FAF9F6]">
       <div className="max-w-[1280px] mx-auto px-8">
-      <h2 className="text-4xl font-light mb-16 text-black dark:text-white">
+      <h2 className="text-4xl font-light mb-16 text-black ">
   Franchise Süreci
 </h2>        <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
           {steps.map((s, i) => (
