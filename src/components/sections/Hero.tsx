@@ -23,8 +23,7 @@ const Hero = () => {
 
   return (
     <section className="w-full bg-white py-10 md:py-14">
-      <div className="relative w-[96%] md:w-[94%] xl:w-[90%] 2xl:w-[85%] max-w-[1600px] mx-auto">
-        <div className="relative aspect-[16/9] overflow-hidden rounded-[28px] shadow-[0_25px_60px_rgba(0,0,0,0.08)]">
+<div className="relative w-[85%] md:w-[85%] xl:w-[80%] 2xl:w-[70%] max-w-[1400px] mx-auto">        <div className="relative aspect-[16/9] overflow-hidden rounded-[28px] shadow-[0_25px_60px_rgba(0,0,0,0.08)]">
           {slides.map((slide, index) => (
             <div
               key={slide.id}
