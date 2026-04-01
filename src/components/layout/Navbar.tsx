@@ -24,11 +24,11 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed inset-x-0 top-0 z-[100] max-w-full overflow-x-clip bg-white transition-all duration-500 ${
+      className={`fixed inset-x-0 top-0 z-[100] max-w-full  bg-white transition-all duration-500 ${
         scrolled ? "py-2 shadow-sm" : "py-4"
       }`}
     >
-      <div className="mx-auto flex w-[96%] max-w-[1600px] items-center justify-between overflow-x-clip md:w-[94%] xl:w-[90%] 2xl:w-[85%]">
+      <div className="mx-auto flex w-[96%] max-w-[1600px] items-center justify-between  md:w-[94%] xl:w-[90%] 2xl:w-[85%]">
         <div className="flex-none max-w-full overflow-hidden">
           <Link href="/" className="block transition-opacity hover:opacity-80">
             <Image
@@ -64,14 +64,14 @@ const Navbar = () => {
               <ChevronDown
                 size={13}
                 strokeWidth={1.6}
-                className={`transition-all duration-300 text-[#231F20]/70 group-hover:text-[#004A30] ${
+                className={`transition-all duration-300 text-[#231F20] group-hover:text-[#004A30] ${
                   isSommarioOpen ? "rotate-180" : ""
                 }`}
               />
             </button>
 
             <div
-              className={`absolute top-full left-1/2 -translate-x-1/2 w-52 bg-white border border-black/[0.04] shadow-xl rounded-2xl mt-2 transition-all duration-300 ${
+              className={`absolute top-full left-1/2 -translate-x-1/2 w-52 bg-white border border-black/[0.05] shadow-xl rounded-2xl mt-2 transition-all duration-300 ${
                 isSommarioOpen
                   ? "opacity-100 visible translate-y-0"
                   : "opacity-0 invisible translate-y-2"
@@ -80,19 +80,19 @@ const Navbar = () => {
               <div className="p-2">
                 <Link
                   href="/kahve"
-                  className="block px-4 py-2.5 text-[13px] font-medium tracking-[0.04em] text-[#231F20]/75 hover:text-[#004A30] hover:bg-black/[0.02] rounded-lg transition-all"
+                  className="block px-4 py-2.5 text-[13px] font-medium tracking-[0.04em] text-[#231F20] hover:text-[#004A30] hover:bg-black/[0.02] rounded-lg transition-all"
                 >
                   Kahve
                 </Link>
                 <Link
                   href="/kampanyalar"
-                  className="block px-4 py-2.5 text-[13px] font-medium tracking-[0.04em] text-[#231F20]/75 hover:text-[#004A30] hover:bg-black/[0.02] rounded-lg transition-all"
+                  className="block px-4 py-2.5 text-[13px] font-medium tracking-[0.04em] text-[#231F20] hover:text-[#004A30] hover:bg-black/[0.02] rounded-lg transition-all"
                 >
                   Kampanyalar
                 </Link>
                 <Link
                   href="/blog"
-                  className="block px-4 py-2.5 text-[13px] font-medium tracking-[0.04em] text-[#231F20]/75 hover:text-[#004A30] hover:bg-black/[0.02] rounded-lg transition-all"
+                  className="block px-4 py-2.5 text-[13px] font-medium tracking-[0.04em] text-[#231F20] hover:text-[#004A30] hover:bg-black/[0.02] rounded-lg transition-all"
                 >
                   Blog
                 </Link>
