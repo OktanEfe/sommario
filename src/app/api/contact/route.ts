@@ -1,9 +1,18 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
+function escapeHtml(value: unknown) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
 export async function POST(req: Request) {
   try {
-    const apiKey = process.env.RESEND_API_KEY;
+    const apiKey = process.env.RESEND_API_KEY?.trim();
 
     if (!apiKey) {
       return NextResponse.json(
@@ -33,15 +42,32 @@ export async function POST(req: Request) {
       );
     }
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(String(email))) {
+      return NextResponse.json(
+        { success: false, error: "Geçerli bir e-posta adresi girin." },
+        { status: 400 }
+      );
+    }
+
+    const safeName = escapeHtml(name);
+    const safeEmail = escapeHtml(email);
+    const safePhone = escapeHtml(phone);
+    const safeSubject = escapeHtml(subject);
+    const safeCity = escapeHtml(city);
+    const safePosition = escapeHtml(position);
+    const safeMessage = escapeHtml(message);
+
     const logoUrl = "https://sommario.com.tr/logo/logo.png";
 
-    let to = process.env.CONTACT_RECEIVER_EMAIL || "";
+    let to = process.env.CONTACT_RECEIVER_EMAIL?.trim() || "";
     let mailSubject = "[Sommario] Yeni Mesaj";
     let html = "";
 
     if (formType === "contact") {
-      to = process.env.CONTACT_RECEIVER_EMAIL || "";
-      mailSubject = `[İletişim Formu] ${subject || "Yeni Mesaj"}`;
+      to = process.env.CONTACT_RECEIVER_EMAIL?.trim() || "";
+      mailSubject = `[İletişim Formu] ${safeSubject || "Yeni Mesaj"}`;
 
       html = `
         <div style="margin:0;padding:40px 20px;background:#f7f5f1;font-family:Arial,Helvetica,sans-serif;color:#231F20;">
@@ -70,36 +96,37 @@ export async function POST(req: Request) {
                 <tr>
                   <td style="background:#FAF9F6;padding:16px 18px;border-radius:16px;">
                     <div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#004A30;font-weight:700;margin-bottom:6px;">Ad Soyad</div>
-                    <div style="font-size:15px;color:#231F20;">${name || "-"}</div>
+                    <div style="font-size:15px;color:#231F20;">${safeName || "-"}</div>
                   </td>
                 </tr>
 
                 <tr>
                   <td style="background:#FAF9F6;padding:16px 18px;border-radius:16px;">
                     <div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#004A30;font-weight:700;margin-bottom:6px;">E-posta</div>
-                    <div style="font-size:15px;color:#231F20;">${email || "-"}</div>
+                    <div style="font-size:15px;color:#231F20;">${safeEmail || "-"}</div>
                   </td>
                 </tr>
 
                 <tr>
                   <td style="background:#FAF9F6;padding:16px 18px;border-radius:16px;">
                     <div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#004A30;font-weight:700;margin-bottom:6px;">Konu</div>
-                    <div style="font-size:15px;color:#231F20;">${subject || "-"}</div>
+                    <div style="font-size:15px;color:#231F20;">${safeSubject || "-"}</div>
                   </td>
                 </tr>
 
                 <tr>
                   <td style="background:#FAF9F6;padding:18px;border-radius:16px;">
                     <div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#004A30;font-weight:700;margin-bottom:8px;">Mesaj</div>
-<div style="
-  font-size:16px;
-  line-height:1.9;
-  color:#231F20;
-  white-space:pre-line;
-  word-break:break-word;
-">
-  ${message || "-"}
-</div>                  </td>
+                    <div style="
+                      font-size:16px;
+                      line-height:1.9;
+                      color:#231F20;
+                      white-space:pre-line;
+                      word-break:break-word;
+                    ">
+                      ${safeMessage || "-"}
+                    </div>
+                  </td>
                 </tr>
               </table>
             </div>
@@ -113,7 +140,7 @@ export async function POST(req: Request) {
         </div>
       `;
     } else if (formType === "franchise") {
-      to = process.env.FRANCHISE_RECEIVER_EMAIL || "";
+      to = process.env.FRANCHISE_RECEIVER_EMAIL?.trim() || "";
       mailSubject = "[Franchise Başvurusu] Yeni Başvuru";
 
       html = `
@@ -143,43 +170,44 @@ export async function POST(req: Request) {
                 <tr>
                   <td style="background:#FAF9F6;padding:16px 18px;border-radius:16px;">
                     <div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#004A30;font-weight:700;margin-bottom:6px;">Ad Soyad</div>
-                    <div style="font-size:15px;color:#231F20;">${name || "-"}</div>
+                    <div style="font-size:15px;color:#231F20;">${safeName || "-"}</div>
                   </td>
                 </tr>
 
                 <tr>
                   <td style="background:#FAF9F6;padding:16px 18px;border-radius:16px;">
                     <div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#004A30;font-weight:700;margin-bottom:6px;">E-posta</div>
-                    <div style="font-size:15px;color:#231F20;">${email || "-"}</div>
+                    <div style="font-size:15px;color:#231F20;">${safeEmail || "-"}</div>
                   </td>
                 </tr>
 
                 <tr>
                   <td style="background:#FAF9F6;padding:16px 18px;border-radius:16px;">
                     <div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#004A30;font-weight:700;margin-bottom:6px;">Telefon</div>
-                    <div style="font-size:15px;color:#231F20;">${phone || "-"}</div>
+                    <div style="font-size:15px;color:#231F20;">${safePhone || "-"}</div>
                   </td>
                 </tr>
 
                 <tr>
                   <td style="background:#FAF9F6;padding:16px 18px;border-radius:16px;">
                     <div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#004A30;font-weight:700;margin-bottom:6px;">Hedeflenen Şehir / Bölge</div>
-                    <div style="font-size:15px;color:#231F20;">${city || "-"}</div>
+                    <div style="font-size:15px;color:#231F20;">${safeCity || "-"}</div>
                   </td>
                 </tr>
 
                 <tr>
                   <td style="background:#FAF9F6;padding:18px;border-radius:16px;">
                     <div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#004A30;font-weight:700;margin-bottom:8px;">Yatırım Bütçesi ve Notlar</div>
-<div style="
-  font-size:16px;
-  line-height:1.9;
-  color:#231F20;
-  white-space:pre-line;
-  word-break:break-word;
-">
-  ${message || "-"}
-</div>                  </td>
+                    <div style="
+                      font-size:16px;
+                      line-height:1.9;
+                      color:#231F20;
+                      white-space:pre-line;
+                      word-break:break-word;
+                    ">
+                      ${safeMessage || "-"}
+                    </div>
+                  </td>
                 </tr>
               </table>
             </div>
@@ -193,7 +221,7 @@ export async function POST(req: Request) {
         </div>
       `;
     } else if (formType === "career") {
-      to = process.env.CAREER_RECEIVER_EMAIL || "";
+      to = process.env.CAREER_RECEIVER_EMAIL?.trim() || "";
       mailSubject = "[Kariyer Başvurusu] Yeni Başvuru";
 
       html = `
@@ -223,43 +251,44 @@ export async function POST(req: Request) {
                 <tr>
                   <td style="background:#FAF9F6;padding:16px 18px;border-radius:16px;">
                     <div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#004A30;font-weight:700;margin-bottom:6px;">Ad Soyad</div>
-                    <div style="font-size:15px;color:#231F20;">${name || "-"}</div>
+                    <div style="font-size:15px;color:#231F20;">${safeName || "-"}</div>
                   </td>
                 </tr>
 
                 <tr>
                   <td style="background:#FAF9F6;padding:16px 18px;border-radius:16px;">
                     <div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#004A30;font-weight:700;margin-bottom:6px;">E-posta</div>
-                    <div style="font-size:15px;color:#231F20;">${email || "-"}</div>
+                    <div style="font-size:15px;color:#231F20;">${safeEmail || "-"}</div>
                   </td>
                 </tr>
 
                 <tr>
                   <td style="background:#FAF9F6;padding:16px 18px;border-radius:16px;">
                     <div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#004A30;font-weight:700;margin-bottom:6px;">Telefon</div>
-                    <div style="font-size:15px;color:#231F20;">${phone || "-"}</div>
+                    <div style="font-size:15px;color:#231F20;">${safePhone || "-"}</div>
                   </td>
                 </tr>
 
                 <tr>
                   <td style="background:#FAF9F6;padding:16px 18px;border-radius:16px;">
                     <div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#004A30;font-weight:700;margin-bottom:6px;">Başvurulan Pozisyon</div>
-                    <div style="font-size:15px;color:#231F20;">${position || "-"}</div>
+                    <div style="font-size:15px;color:#231F20;">${safePosition || "-"}</div>
                   </td>
                 </tr>
 
                 <tr>
                   <td style="background:#FAF9F6;padding:18px;border-radius:16px;">
                     <div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#004A30;font-weight:700;margin-bottom:8px;">Kısa Ön Yazı</div>
-<div style="
-  font-size:16px;
-  line-height:1.9;
-  color:#231F20;
-  white-space:pre-line;
-  word-break:break-word;
-">
-  ${message || "-"}
-</div>                  </td>
+                    <div style="
+                      font-size:16px;
+                      line-height:1.9;
+                      color:#231F20;
+                      white-space:pre-line;
+                      word-break:break-word;
+                    ">
+                      ${safeMessage || "-"}
+                    </div>
+                  </td>
                 </tr>
               </table>
             </div>
@@ -289,7 +318,7 @@ export async function POST(req: Request) {
     const result = await resend.emails.send({
       from: "Sommario <admin@sommario.com.tr>",
       to: [to],
-      replyTo: email,
+      replyTo: safeEmail,
       subject: mailSubject,
       html,
     });
@@ -297,8 +326,9 @@ export async function POST(req: Request) {
     console.log("Resend result:", result);
 
     if (result.error) {
+      console.error("Resend error:", result.error);
       return NextResponse.json(
-        { success: false, error: result.error.message },
+        { success: false, error: "Mail gönderilemedi." },
         { status: 500 }
       );
     }
