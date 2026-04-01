@@ -287,7 +287,7 @@ export async function POST(req: Request) {
     }
 
     const result = await resend.emails.send({
-      from: "Sommario <info@sommario.com.tr>",
+      from: "Sommario <admin@sommario.com.tr>",
       to: [to],
       replyTo: email,
       subject: mailSubject,
