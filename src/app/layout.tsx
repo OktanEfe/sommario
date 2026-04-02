@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Analytics } from '@vercel/analytics/react';
+
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import SmoothScroll from "@/components/providers/SmoothScroll";
@@ -90,7 +92,11 @@ export default function RootLayout({
           <SmoothScroll>
             <Navbar />
             <main className="pt-24 overflow-x-hidden">
-              <PageTransition>{children}</PageTransition>
+              <PageTransition>
+              {children}
+              <Analytics />
+
+              </PageTransition>
             </main>
             <Footer />
           </SmoothScroll>
