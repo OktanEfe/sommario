@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Analytics } from '@vercel/analytics/react';
 import Script from "next/script";
-
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -97,6 +97,8 @@ export default function RootLayout({
               <PageTransition>
               {children}
               <Analytics />
+              <SpeedInsights />
+
               <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-J22E595GCE"
           strategy="afterInteractive"
