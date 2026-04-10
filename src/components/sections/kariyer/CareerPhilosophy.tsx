@@ -2,84 +2,94 @@
 import React from "react";
 import Image from "next/image";
 
+
 const CareerPhilosophy = () => {
   return (
-    <section className="py-32 bg-[#FAF9F6]">
-      <div className="max-w-[1280px] mx-auto px-8">
-        <div className="flex flex-col md:flex-row gap-20 items-center">
-          
-          <div className="w-full md:w-1/2 space-y-10">
-            <h2 className="text-4xl font-light tracking-tighter text-[#231F20]">
-              Sommario&apos;da <span className="italic">her ses</span> değerlidir.
-            </h2>
+    <section className="relative w-full min-h-[800px] flex items-center bg-[#FAF9F6] overflow-hidden">
+      
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-r from-[#FAF9F6] via-[#FAF9F6]/90 to-transparent z-10" />
+        <div className="relative w-full h-full lg:w-3/4 lg:ml-auto">
+          <Image
+            src="/kariyer/kariyer.webp"
+            alt="Sommario Team"
+            fill
+            className="object-cover object-center grayscale-[20%] opacity-80"
+            priority
+          />
+        </div>
+      </div>
 
-            <div className="space-y-8">
-              <div className="space-y-2">
-                <h4 className="text-2xl text-[#004A30]">Kapsayıcı Kültür</h4>
+      <div className="relative z-20 max-w-[1280px] mx-auto px-8 w-full py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+          
+          <div className="lg:col-span-6 space-y-16">
+            <div className="space-y-6">
+              <span className="text-[#E02826] text-[11px] uppercase tracking-[0.4em] font-bold">Bizim Hikayemiz</span>
+              <h2 className="text-5xl md:text-7xl font-light tracking-tighter text-[#231F20] leading-[0.95]">
+                Sommario&apos;da <br />
+                <span className="italic font-serif text-[#004A30]">her ses</span> <br /> 
+                yankı bulur.
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+              <div className="space-y-4">
+                <h4 className="text-xl font-medium text-[#004A30]">Kapsayıcı Kültür</h4>
                 <p className="text-lg text-black/50 font-light leading-relaxed">
                   Farklılıkların zenginlik olduğuna inanıyor, her partnerimizin kendisi olabildiği bir ortam yaratıyoruz.
                 </p>
               </div>
-
-              <div className="space-y-2">
-                <h4 className="text-2xl text-[#004A30]">Sürekli Gelişim</h4>
+              <div className="space-y-4">
+                <h4 className="text-xl font-medium text-[#004A30]">Sürekli Gelişim</h4>
                 <p className="text-lg text-black/50 font-light leading-relaxed">
-                  Sadece kahveyi değil, birbirimizi de geliştiriyoruz.
+                  Sadece kahveyi değil, birbirimizi de geliştiriyoruz. Kariyer yolculuğunuzda daima yanınızdayız.
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="w-full md:w-1/2 flex items-center gap-6">
+          <div className="lg:col-span-5 lg:col-start-8 flex flex-col justify-center gap-12">
             
-            <div className="flex flex-col gap-4 w-[45%]">
-            <div className="bg-[#004A30] rounded-3xl p-6 flex flex-col justify-end text-white">
-                <span className="text-2xl font-light mb-1">
-                  100+
-                </span>
-                <p className="text-[9px] uppercase tracking-widest opacity-60">
-                  Aktif Partner
-                </p>
-              </div>
-              <div className="bg-white rounded-3xl p-6 flex flex-col justify-end shadow-sm">
-                <span className="text-2xl font-light text-[#004A30] mb-1">
-                  %70
-                </span>
-                <p className="text-[9px] uppercase tracking-widest text-black/40">
-                  İç Terfi Oranı
-                </p>
-              </div>
+          <div className="flex items-center gap-5 md:gap-8 group">
+  <div className="text-4xl md:text-6xl lg:text-7xl font-extralight text-[#004A30] tracking-tighter w-20 md:w-32">
+    100+
+  </div>
+  <div className="space-y-1">
+    <h5 className="text-xs uppercase tracking-[0.2em] font-bold text-black/70">Aktif Partner</h5>
+    <p className="text-xs md:text-sm text-black/70 font-light">Büyük bir aile olarak büyüyoruz.</p>
+  </div>
+</div>
 
-             
-              <div className="bg-[#E02826] rounded-3xl p-6 flex flex-col justify-end shadow-sm">
-                <span className="text-2xl font-light text-white mb-1">
-                  5+
-                </span>
-                <p className="text-[9px] uppercase tracking-widest text-white">
-Şube               </p>
-              </div>
+<div className="flex items-center gap-5 md:gap-8 group">
+  <div className="text-4xl md:text-6xl lg:text-7xl font-extralight text-[#004A30] tracking-tighter w-20 md:w-32">
+    %70
+  </div>
+  <div className="space-y-1">
+    <h5 className="text-xs uppercase tracking-[0.2em] font-bold text-black/70">İç Terfi Oranı</h5>
+    <p className="text-xs md:text-sm text-black/70 font-light">Liderlerimizi içeriden yetiştiriyoruz.</p>
+  </div>
+</div>
 
-             
-
-            </div>
-
-            <div className="relative w-[55%] aspect-[3/4] rounded-[2.5rem] overflow-hidden shadow-sm border border-black/[0.03] group">
-              <Image
-                src="/kariyer/kariyer.webp"
-                alt="Sommario Team"
-                fill
-                className="object-cover transition-transform duration-[1200ms] group-hover:scale-105"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-
-              <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
-            </div>
+<div className="flex items-center gap-5 md:gap-8 group">
+  <div className="text-4xl md:text-6xl lg:text-7xl font-extralight text-[#E02826] tracking-tighter w-20 md:w-32">
+    5+
+  </div>
+  <div className="space-y-1">
+    <h5 className="text-xs uppercase tracking-[0.2em] font-bold text-black/70">Şube</h5>
+    <p className="text-xs md:text-sm text-black/70 font-light">Nitelikli kahveyi her yere taşıyoruz.</p>
+  </div>
+</div>
 
           </div>
 
         </div>
       </div>
-    </section>
+
+{/* Mobil: /90 */}
+<div className="absolute inset-0 bg-gradient-to-r from-[#FAF9F6] via-[#FAF9F6]/85 to-transparent z-10 lg:hidden" />
+{/* Desktop: /95 */}
+<div className="absolute inset-0 bg-gradient-to-r from-[#FAF9F6] via-[#FAF9F6]/95 to-transparent z-10 hidden lg:block" />    </section>
   );
 };
 

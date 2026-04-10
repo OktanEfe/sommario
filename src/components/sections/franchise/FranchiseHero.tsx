@@ -12,7 +12,7 @@ const FranchiseHero = () => {
               İş Ortaklığı
             </span>
 
-            <h1 className="text-[42px] sm:text-[52px] md:text-[64px] xl:text-[76px] font-light tracking-tighter text-[#231F20] leading-[1.02] break-words">
+            <h1 className="text-[46px] sm:text-[52px] md:text-[64px] xl:text-[76px] font-light tracking-tighter text-[#231F20] leading-[1.02] break-words">
               Birlikte{" "}
               <span className="italic font-serif text-[#004A30]">
                 Büyüyelim.

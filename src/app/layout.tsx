@@ -93,7 +93,7 @@ export default function RootLayout({
         <div className="relative w-full overflow-x-hidden">
           <SmoothScroll>
             <Navbar />
-            <main className="pt-24 overflow-x-hidden">
+            <main className="pt-20 overflow-x-hidden">
               <PageTransition>
               {children}
               <Analytics />
