@@ -94,7 +94,7 @@ export default function ContantClient() {
                     Telefon
                   </h4>
                   <p className="text-[18px] md:text-[24px] text-[#1A1A1A] font-light">
-                  +90 543 905 03 78
+                  +90 533 506 8766
 
                   </p>
                 </div>
