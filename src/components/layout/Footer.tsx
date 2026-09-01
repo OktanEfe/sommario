@@ -62,6 +62,8 @@ const Footer = () => {
             <ul className="space-y-4">
               <li><Link href="/iletisim" className="text-sm text-black/60 hover:text-[#004A30] transition-colors font-light">Bize Ulaşın</Link></li>
               <li><Link href="/kariyer#CareerFAQ" className="text-sm text-black/60 hover:text-[#004A30] transition-colors font-light">Sıkça Sorulanlar</Link></li>
+              <li><Link href="/gizlilik" className="text-sm text-black/60 hover:text-[#004A30] transition-colors font-light">Gizlilik Politikası</Link></li>
+              <li><Link href="/kosullar" className="text-sm text-black/60 hover:text-[#004A30] transition-colors font-light">Kullanım Koşulları</Link></li>
               <li><Link href="/kvkk" className="text-sm text-black/60 hover:text-[#004A30] transition-colors font-light">KVKK</Link></li>
             </ul>
           </div>
